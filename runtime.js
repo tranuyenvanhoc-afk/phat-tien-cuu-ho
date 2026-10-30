@@ -94,7 +94,7 @@
   function mount(name, container) {
     const def = window.DEFS[name];
     const C = new Function('DCLogic', def.script + '\n;return Component;')(DCLogic);
-    const inst = new C({});
+    const inst = new C(Object.assign({}, def.props));
     const tpl = document.createElement('template');
     tpl.innerHTML = def.tpl;
     const ctx = { name, children: {} };
