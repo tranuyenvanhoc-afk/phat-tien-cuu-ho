@@ -64,7 +64,7 @@
       if (t === 'dc-import') {
         const name = ch.getAttribute('name');
         let kid = ctx.children[name];
-        if (!kid) { kid = document.createElement('div'); mount(name, kid); ctx.children[name] = kid; }
+        if (!kid) { kid = document.createElement('div'); kid.__kid = true; mount(name, kid); ctx.children[name] = kid; }
         out.appendChild(kid);
         continue;
       }
@@ -77,6 +77,7 @@
             const n = a.name.toLowerCase();
             const ev = n === 'onclick' ? 'click' : n === 'onchange' ? (ch.localName === 'select' ? 'change' : 'input') : n.slice(2);
             el.addEventListener(ev, fn);
+            (el.__ls = el.__ls || []).push([ev, fn]);
           }
           continue;
         }
@@ -86,9 +87,38 @@
         el.setAttribute(a.name, v);
       }
       render(ch.localName === 'template' ? ch.content : ch, scope, el, ctx);
-      if (selectValue !== undefined) el.value = selectValue;
+      if (selectValue !== undefined) { el.value = selectValue; el.__val = selectValue; }
       out.appendChild(el);
     }
+  }
+
+  // Cập nhật cây cũ theo cây mới thay vì dựng lại, để ô đang chọn/đang kéo
+  // (select, thanh trượt, ô nhập) không bị thay mới giữa chừng trên điện thoại.
+  function same(a, b) {
+    return a.nodeType === b.nodeType && a.nodeName === b.nodeName &&
+      (a.nodeName !== 'INPUT' || a.getAttribute('type') === b.getAttribute('type'));
+  }
+  function patch(a, b) {
+    if (a.nodeType === 3) { if (a.textContent !== b.textContent) a.textContent = b.textContent; return; }
+    for (const at of [...a.attributes]) if (!b.hasAttribute(at.name)) a.removeAttribute(at.name);
+    for (const at of b.attributes) if (a.getAttribute(at.name) !== at.value) a.setAttribute(at.name, at.value);
+    for (const [ev, fn] of a.__ls || []) a.removeEventListener(ev, fn);
+    for (const [ev, fn] of b.__ls || []) a.addEventListener(ev, fn);
+    a.__ls = b.__ls;
+    patchChildren(a, b);
+    if (a.nodeName === 'INPUT' && b.hasAttribute('value') && a.value !== b.value) a.value = b.value;
+    if (a.nodeName === 'SELECT' && b.__val !== undefined && a.value !== b.__val) a.value = b.__val;
+  }
+  function patchChildren(oldP, newP) {
+    const kids = [...newP.childNodes];
+    kids.forEach((n, i) => {
+      const o = oldP.childNodes[i];
+      if (n.__kid) { if (o !== n) oldP.insertBefore(n, o || null); return; }
+      if (!o) oldP.appendChild(n);
+      else if (same(o, n)) patch(o, n);
+      else oldP.replaceChild(n, o);
+    });
+    while (oldP.childNodes.length > kids.length) oldP.removeChild(oldP.lastChild);
   }
 
   function mount(name, container) {
@@ -99,22 +129,9 @@
     tpl.innerHTML = def.tpl;
     const ctx = { name, children: {} };
     inst.__draw = () => {
-      const act = document.activeElement;
-      const focusId = act && container.contains(act) ? act.id : null;
-      const sel = focusId && 'selectionStart' in act ? [act.selectionStart, act.selectionEnd] : null;
-      // Giữ nội dung người dùng đã nhập ở các ô không gắn giá trị từ template.
-      const typed = {};
-      container.querySelectorAll('input[id], textarea[id], select[id]').forEach((f) => { typed[f.id] = f.value; });
-      container.textContent = '';
-      render(tpl.content, inst.renderVals(), container, ctx);
-      for (const [id, v] of Object.entries(typed)) {
-        const f = document.getElementById(id);
-        if (f && container.contains(f) && f.getAttribute('value') === null) f.value = v;
-      }
-      if (focusId) {
-        const again = document.getElementById(focusId);
-        if (again) { again.focus(); try { if (sel) again.setSelectionRange(sel[0], sel[1]); } catch (e) { /* number input */ } }
-      }
+      const next = document.createElement('div');
+      render(tpl.content, inst.renderVals(), next, ctx);
+      patchChildren(container, next);
     };
     inst.__draw();
     if (inst.componentDidMount) inst.componentDidMount();
