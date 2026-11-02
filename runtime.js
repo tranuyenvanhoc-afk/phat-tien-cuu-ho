@@ -86,6 +86,11 @@
         if (a.name === 'value' && ch.localName === 'input') el.value = v;
         el.setAttribute(a.name, v);
       }
+      // Ảnh ngoài màn hình đầu tải sau, đỡ tốn dữ liệu di động.
+      if (t === 'img' && !ch.hasAttribute('loading') && !ch.closest('.pt-slides,.pt-cover,.pt-header')) {
+        el.setAttribute('loading', 'lazy');
+        el.setAttribute('decoding', 'async');
+      }
       render(ch.localName === 'template' ? ch.content : ch, scope, el, ctx);
       if (selectValue !== undefined) { el.value = selectValue; el.__val = selectValue; }
       out.appendChild(el);
@@ -139,6 +144,12 @@
 
   window.bootPage = function (name) {
     mount(name, document.getElementById('app'));
+    // Trên điện thoại menu cuộn ngang: đưa mục của trang hiện tại vào giữa.
+    const cur = document.querySelector('.pt-nav [aria-current]');
+    if (cur) {
+      const nav = cur.parentElement, nr = nav.getBoundingClientRect(), cr = cur.getBoundingClientRect();
+      nav.scrollLeft += cr.left - nr.left - (nr.width - cr.width) / 2;
+    }
     if (location.hash) { const t = document.getElementById(location.hash.slice(1)); if (t) t.scrollIntoView(); }
   };
 })();
