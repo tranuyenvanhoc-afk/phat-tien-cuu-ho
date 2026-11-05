@@ -59,13 +59,17 @@ git push
 
 Khoảng 1 phút sau trang web tự cập nhật. Chưa có quyền ghi thì nhờ chủ kho thêm vào mục Collaborators, hoặc tạo fork rồi gửi pull request.
 
-## Việc còn lại
+## Form đăng ký
 
-**Form đăng ký chưa gửi được về Google Sheet.** Script đang gắn ở `SHEET_URL` báo lỗi, nên khách điền form sẽ thấy thông báo lỗi kèm hotline. Cách sửa:
+Form đang gửi về Google Sheet của chủ dự án qua link `SHEET_URL`. Khi chạy thử trên máy, form vẫn ghi vào Sheet thật, nên đừng gửi thử bằng số điện thoại của khách.
 
-1. Trong Google Sheet, vào **Tiện ích mở rộng → Apps Script**, xóa hết code cũ và dán nội dung `source/tools/google-sheet-form.gs`. Đổi `SHEET_ID` thành mã của Sheet nhận dữ liệu.
+Muốn đổi sang Sheet khác:
+
+1. Trong Google Sheet mới, vào **Tiện ích mở rộng → Apps Script**, xóa hết code cũ và dán nội dung `source/tools/google-sheet-form.gs`. Đổi `SHEET_ID` thành mã của Sheet đó.
 2. Vào **Triển khai → Tùy chọn triển khai mới → Ứng dụng web**, chọn **Thực thi với tư cách: Tôi** và **Người có quyền truy cập: Bất kỳ ai**.
 3. Dán link kết thúc bằng `/exec` vào `SHEET_URL`, dựng lại và đưa lên web.
+
+Sheet chứa số điện thoại khách hàng, nên để ở chế độ **Bị hạn chế**, không chia sẻ công khai. Form vẫn ghi được vì script chạy bằng tài khoản của chủ Sheet.
 
 ## Các file khác trong kho
 

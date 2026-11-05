@@ -1,6 +1,6 @@
 // Nhận thông tin từ form "Nhận Tư Vấn Gói Cứu hộ 24/7" và ghi vào Google Sheet.
 // Dán vào Google Sheet: Tiện ích mở rộng > Apps Script, rồi triển khai thành Ứng dụng web.
-const SHEET_ID = '1sfeU-DjQkQtOBPlJPW-nO_uXv1_qXOmDgVR6aON7ph0';
+const SHEET_ID = 'DAN_MA_GOOGLE_SHEET_VAO_DAY';
 const HEADERS = ['Thời gian', 'Họ và tên', 'Số điện thoại', 'Loại xe', 'Ghi chú', 'Nguồn'];
 
 function reply(data) {
