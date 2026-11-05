@@ -1,0 +1,1325 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<title>Landing page – Cứu hộ 24/7 Phát Tiến</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:'Inter',system-ui,sans-serif;background:#fff}
+a{color:inherit;text-decoration:none}
+.pt-nav::-webkit-scrollbar{display:none}
+.pt-slide{position:absolute;inset:0;opacity:0;animation:ptfade 12s infinite}
+.pt-slide:nth-child(1){opacity:1;animation-name:ptfade1}
+.pt-slide:nth-child(2){animation-delay:6s}
+.pt-dot{display:block;height:10px;width:10px;border-radius:100px;background:#fff;opacity:.5;box-shadow:0 1px 4px rgba(0,0,0,.35);animation:ptdot 12s infinite}
+.pt-dot:nth-child(2){animation-delay:6s}
+@keyframes ptfade{0%{opacity:0}8%{opacity:1}50%{opacity:1}58%{opacity:0}100%{opacity:0}}
+@keyframes ptfade1{0%{opacity:1}50%{opacity:1}58%{opacity:0}92%{opacity:0}100%{opacity:1}}
+@keyframes ptdot{0%{opacity:1;width:30px}50%{opacity:1;width:30px}54%{opacity:.5;width:10px}100%{opacity:.5;width:10px}}
+@media (prefers-reduced-motion:reduce){.pt-slide,.pt-dot{animation:none !important}.pt-slide:nth-child(n+2){display:none}}
+@media (max-width:760px){
+.pt-slides,.pt-cover{height:auto !important;aspect-ratio:25/8}
+.pt-nav a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center;padding:0 16px !important}
+.pt-header > a:last-child,.pt-header > div:last-child > a{min-height:44px;box-sizing:border-box;display:inline-flex;align-items:center}
+.pt-price{font-size:52px !important}
+.pt-price span{display:block;margin:8px 0 0 !important}
+.pt-stats{display:grid !important;grid-template-columns:1fr 1fr;gap:24px 16px !important}
+.pt-stats > div{max-width:none !important}
+.pt-header{padding:10px 16px !important;gap:10px 12px !important}
+.pt-header img{height:40px !important}
+.pt-nav{order:3;flex:1 0 100%;flex-wrap:nowrap !important;overflow-x:auto;gap:6px !important;margin:0 -16px;padding:0 16px 2px;scrollbar-width:none}
+.pt-nav a{flex:none;padding:11px 15px;border-radius:100px;background:#F4F4F4;font-size:14px}
+.pt-nav a[aria-current]{background:#FFF1F2}
+.pt-hide-m{display:none !important}
+.pt-intro-title{font-size:30px !important}
+.pt-header > a:last-child,.pt-header > div:last-child > a{padding:10px 16px !important;font-size:14px !important}
+.pt-row{flex-wrap:wrap}
+.pt-row > span:first-child{flex:1 1 150px}
+.pt-footer a{min-height:40px;display:inline-flex;align-items:center}
+.pt-gallery{grid-template-columns:repeat(3,minmax(0,1fr)) !important;gap:6px !important}
+.pt-gallery > div{border-radius:12px !important;aspect-ratio:1/1 !important}
+}
+/* pt-mobile-compat */
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%}
+body{-webkit-tap-highlight-color:rgba(227,18,27,.12)}
+a,button,select,input,textarea,label{touch-action:manipulation}
+img{max-width:100%}
+:focus-visible{outline:2px solid #E3121B;outline-offset:2px}
+[style*="backdrop-filter"]{-webkit-backdrop-filter:blur(8px)}
+@supports not (overflow:clip){body{overflow-x:hidden}}
+select{-webkit-appearance:none;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 24 24' fill='none' stroke='%23E3121B' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") !important;background-repeat:no-repeat !important;background-position:right 18px center !important;background-size:14px !important;padding-right:44px !important}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+[id]{scroll-margin-top:96px}
+@media (max-width:760px){
+[id]{scroll-margin-top:128px}
+input,select,textarea{font-size:16px !important}
+input[type=range]{height:44px;margin:0}
+.pt-header{padding-left:max(16px,env(safe-area-inset-left)) !important;padding-right:max(16px,env(safe-area-inset-right)) !important}
+.pt-header > a:first-child{min-height:44px;display:flex !important;align-items:center}
+.pt-footer a{min-height:44px}
+a[href*="google.com/maps"]{padding:13px 18px !important}
+[style*="padding:88px 24px"],[style*="padding:80px 24px"]{padding-top:56px !important}
+[style*="padding:88px 24px;"],[style$="padding:88px 24px"],[style*="padding:80px 24px;"],[style$="padding:80px 24px"]{padding-bottom:56px !important}
+[style*="padding:72px 24px"]{padding-top:48px !important}
+[style*="padding:72px 24px;"],[style$="padding:72px 24px"]{padding-bottom:48px !important}
+[style*="padding:56px 24px 88px"],[style*="padding:56px 24px 80px"]{padding-bottom:48px !important}
+.pt-popup{left:12px !important;right:12px !important;width:auto !important;bottom:max(12px,env(safe-area-inset-bottom)) !important;border-radius:22px !important}
+.pt-popup > div:first-of-type{display:none !important}
+.pt-popup > div:last-of-type{padding:8px 52px 6px 10px !important}
+.pt-popup > div:last-of-type > div:nth-child(2){font-size:18px !important}
+.pt-popup > div:last-of-type > div:nth-child(3){display:none}
+.pt-popup button{top:8px !important;right:8px !important}
+}
+/* pt-mobile-2 */
+@media (max-width:760px){
+[style*="--fk"]{white-space:nowrap !important;font-size:min(var(--fc),calc((100vw - var(--fg)) * var(--fk))) !important}
+[style*="--m2"]{font-size:var(--m2) !important;line-height:1.25 !important;text-wrap:balance}
+.pt-scope{grid-template-columns:1fr 1fr !important;gap:10px !important}
+.pt-scope > div{border-radius:18px !important;padding:6px !important}
+.pt-scope-img{height:100px !important;border-radius:13px !important}
+.pt-scope-img > span{display:none}
+.pt-scope-body{padding:12px 6px 8px !important}
+.pt-scope-t{font-size:16px !important;line-height:1.2;margin-bottom:10px !important}
+.pt-scope-list{grid-template-columns:1fr !important;gap:8px !important}
+.pt-scope-li{font-size:13px !important;line-height:1.35;gap:6px !important;align-items:flex-start !important}
+.pt-scope-li > span{width:16px !important;height:16px !important;font-size:10px !important;margin-top:1px}
+.pt-pack{padding:20px !important;gap:16px !important;border-radius:22px !important;margin-bottom:12px !important}
+.pt-reg{gap:12px !important}
+.pt-reg-card{padding:20px !important;gap:12px !important;border-radius:22px !important}
+.pt-reg-card .pt-price{font-size:40px !important}
+.pt-reg-desc{display:none}
+.pt-reg-perks{gap:8px !important;font-size:14px !important}
+.pt-reg-perks span:first-child{width:20px !important;height:20px !important;font-size:11px !important}
+.pt-reg-form{padding:16px !important;border-radius:22px !important}
+.pt-reg-f{grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;gap:12px 10px !important}
+.pt-reg-f label{min-width:0}
+.pt-reg-f input,.pt-reg-f textarea{width:100%;min-width:0}
+.pt-reg-form{flex-basis:100% !important}
+.pt-reg-f label{font-size:13px !important;gap:6px !important}
+.pt-reg-f input{height:46px !important;padding:0 14px !important}
+.pt-reg-f textarea{height:84px;padding:10px 14px !important;border-radius:16px !important}
+.pt-reg-f button{height:52px !important;font-size:16px !important}
+.pt-reg-note{font-size:12.5px !important;padding:10px 12px !important;border-radius:14px !important}
+}
+/* pt-mobile-3 */
+@media (max-width:760px){
+.pt-nav{flex-wrap:wrap !important;overflow:visible !important;justify-content:center;gap:4px !important;margin:0 !important;padding:0 !important}
+.pt-nav a{flex:1 1 auto !important;justify-content:center;min-height:40px !important;padding:0 8px !important;font-size:12px !important;white-space:nowrap}
+}
+/* pt-mobile-4 */
+.pt-burger,.pt-drawer{display:none}
+@keyframes pt-slide{from{transform:translateX(100%)}to{transform:none}}
+@keyframes pt-fade{from{opacity:0}to{opacity:1}}
+@media (max-width:760px){
+.pt-header{flex-wrap:nowrap !important;gap:8px !important}
+.pt-header > a:first-child{flex:none}
+.pt-nav{display:none !important}
+.pt-header > a[href^="tel:"],.pt-header > div:last-of-type{margin-left:auto}
+.pt-header a[href^="tel:"]{display:inline-flex !important;align-items:center;box-sizing:border-box;font-size:13px !important;padding:0 14px !important;min-height:40px !important;white-space:nowrap}
+.pt-burger{display:inline-flex;align-items:center;justify-content:center;flex:none;width:44px;height:44px;border:0;border-radius:12px;background:transparent;color:#E3121B;cursor:pointer}
+.pt-burger:focus-visible,.pt-drawer-x:focus-visible,.pt-drawer-nav a:focus-visible,.pt-drawer-cta:focus-visible{outline:2px solid #E3121B;outline-offset:2px}
+html:has(.pt-drawer){overflow:hidden}
+.pt-drawer{display:block;position:fixed;inset:0;z-index:100}
+.pt-drawer-bg{position:absolute;inset:0;width:100%;border:0;padding:0;background:rgba(20,20,20,.45);-webkit-backdrop-filter:blur(4px);backdrop-filter:blur(4px);cursor:pointer;animation:pt-fade .2s ease-out}
+.pt-drawer-panel{position:absolute;top:0;right:0;bottom:0;width:min(78vw,340px);box-sizing:border-box;background:#fff;display:flex;flex-direction:column;padding:max(18px,env(safe-area-inset-top)) 22px max(24px,env(safe-area-inset-bottom));box-shadow:-12px 0 40px rgba(0,0,0,.18);overflow-y:auto;animation:pt-slide .24s cubic-bezier(.16,1,.3,1)}
+.pt-drawer-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}
+.pt-drawer-x{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border:0;border-radius:12px;background:#F4F4F4;color:#E3121B;cursor:pointer}
+.pt-drawer-nav{display:flex;flex-direction:column}
+.pt-drawer-nav a{display:flex;align-items:center;min-height:56px;padding:0 6px;border-bottom:1px solid #EAEAEA;font-size:17px;font-weight:600;color:#111 !important}
+.pt-drawer-nav a[aria-current]{color:#E3121B !important}
+.pt-drawer-cta{display:flex;align-items:center;justify-content:center;min-height:54px;margin-top:24px;border-radius:14px;background:#E3121B;color:#fff !important;font-size:16px;font-weight:700;box-shadow:0 10px 24px rgba(227,18,27,.28)}
+.pt-btnrow{flex-wrap:nowrap !important;gap:8px !important}
+.pt-btnrow > a{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;text-align:center;min-height:52px;box-sizing:border-box;padding:6px 10px !important;font-size:14px !important;line-height:1.25}
+.pt-stats3{display:grid !important;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px !important;margin-top:32px !important}
+.pt-stats3 > div{max-width:none !important}
+.pt-stats3 > div > div:first-child{font-size:30px !important}
+.pt-stats3 > div > div:last-child{font-size:12px !important}
+}
+@media (prefers-reduced-motion:reduce){.pt-drawer-bg,.pt-drawer-panel{animation:none}}
+/* pt-landing-m */
+.pt-drawer-ph{display:flex;align-items:center;justify-content:center;min-height:52px;margin-top:10px;border-radius:14px;background:#141418;color:#fff !important;font-size:15px;font-weight:600}
+.pt-drawer-ph:focus-visible{outline:2px solid #E3121B;outline-offset:2px}
+@media (max-width:760px){
+.pt-slides{aspect-ratio:16/10 !important;height:auto !important;width:auto !important;margin:12px 12px 0;border-radius:18px}
+.pt-slide:first-child img{object-position:68% 62%}
+.pt-footer > div{padding-top:40px !important}
+.pt-footer > div > div:first-child{gap:28px 16px !important}
+.pt-footer > div > div:first-child > div:nth-child(1){flex:1 1 100% !important;gap:14px !important}
+.pt-footer > div > div:first-child > div:nth-child(1) > a:first-child{padding:8px 12px !important;border-radius:12px !important}
+.pt-footer > div > div:first-child > div:nth-child(1) img{height:42px !important}
+.pt-footer > div > div:first-child > div:nth-child(1) > a[href^="tel:"]{font-size:14px !important;padding:10px 16px !important}
+.pt-footer p{font-size:13.5px !important;line-height:1.65 !important}
+.pt-footer > div > div:first-child > div:nth-child(2),.pt-footer > div > div:first-child > div:nth-child(3){flex:1 1 40% !important}
+.pt-footer > div > div:first-child > div:nth-child(4){flex:1 1 100% !important}
+.pt-footer [style*="letter-spacing:.14em"]{font-size:13px !important}
+.pt-footer [style*="margin:12px 0 22px"]{margin:8px 0 10px !important}
+.pt-footer [style*="gap:14px;font-size:15px"]{gap:0 !important;font-size:14px !important}
+.pt-footer [style*="gap:16px;font-size:15px"]{gap:6px !important;font-size:14px !important}
+.pt-footer [style*="margin-top:56px"]{margin-top:28px !important;justify-content:center !important;text-align:center;font-size:12px !important;padding:18px 0 22px !important}
+}
+/* pt-landing-clip */
+.pt-clipcard{display:none}
+@media (max-width:760px){
+.pt-intro-desk{display:none !important}
+#gioi-thieu-dv{padding-bottom:48px !important}
+.pt-clipcard{display:block;position:relative;border-radius:24px;overflow:hidden;background:#111;box-shadow:0 18px 40px rgba(0,0,0,.25)}
+.pt-clip-frame{position:relative;aspect-ratio:16/9;background:#000}
+.pt-clip-btn{position:relative;display:block;width:100%;aspect-ratio:3/4;padding:0;border:0;margin:0;background:#111;color:#fff;text-align:left;cursor:pointer;font-family:inherit}
+.pt-clip-btn:focus-visible{outline:3px solid #E3121B;outline-offset:3px}
+.pt-clip-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 50%}
+.pt-clip-shade{position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,10,12,.15) 0%,rgba(10,10,12,.2) 30%,rgba(10,10,12,.86) 58%,rgba(10,10,12,.96) 100%)}
+.pt-clip-play{position:absolute;left:50%;top:25%;width:120px;height:120px;transform:translate(-50%,-50%)}
+.pt-clip-ring{position:absolute;inset:0;width:100%;height:100%;fill:#fff;font:700 10.5px/1 'Inter',sans-serif;letter-spacing:.18em;animation:pt-spin 14s linear infinite}
+@keyframes pt-spin{to{transform:rotate(360deg)}}
+.pt-clip-dot{position:absolute;left:50%;top:50%;width:58px;height:58px;margin:-29px 0 0 -29px;border-radius:50%;background:rgba(255,255,255,.95);color:#E3121B;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.35)}
+.pt-clip-dot svg{margin-left:3px}
+.pt-clip-tx{position:absolute;left:0;right:0;bottom:0;display:flex;flex-direction:column;gap:6px;padding:18px 18px 18px}
+.pt-clip-tag{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:#FFC93C}
+.pt-clip-title{font-family:'Inter Tight',sans-serif;font-size:24px;font-weight:700;line-height:1.2}
+.pt-clip-body{font-size:13.5px;line-height:1.55;color:rgba(255,255,255,.88)}
+.pt-clip-meta{font-size:12px;font-weight:600;color:rgba(255,255,255,.75)}
+#quy-trinh > div{padding-top:48px !important;padding-bottom:48px !important}
+#quy-trinh h2{margin-bottom:20px !important}
+}
+@media (prefers-reduced-motion:reduce){.pt-clip-ring{animation:none}}
+/* pt-landing-7 */
+@media (max-width:760px){
+#dang-ky-goi{padding-top:56px !important}
+.pt-footer > div > div:first-child > div:nth-child(3):last-child{flex:1 1 100% !important}
+}
+/* pt-landing-8 */
+.pt-sbar,.pt-clip-chip{display:none}
+@media (max-width:760px){
+.pt-steps3{display:flex !important;flex-wrap:nowrap;gap:14px !important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;margin:0 -24px;padding:6px 24px 18px;scroll-padding-inline:24px}
+.pt-steps3::-webkit-scrollbar{display:none}
+.pt-steps3 > div{flex:0 0 78%;box-sizing:border-box;scroll-snap-align:start;padding:24px 22px !important;border-radius:22px !important;transition:transform .25s,box-shadow .25s}
+.pt-steps3 > div > div:nth-child(1){font-size:44px !important}
+.pt-steps3 > div > div:nth-child(2){font-size:19px !important;line-height:1.3;margin:12px 0 6px !important}
+.pt-steps3 > div > div:nth-child(3){font-size:14px !important;line-height:1.55 !important}
+.pt-sbar{display:block;position:relative;height:4px;margin:6px auto 0;max-width:180px;border-radius:4px;background:#E2E2E2;overflow:hidden}
+.pt-sbar > span{position:absolute;left:0;top:0;bottom:0;width:var(--w,40%);border-radius:4px;background:#E3121B;transform:translateX(var(--x,0%));transition:transform .12s linear}
+.pt-clip-btn{aspect-ratio:4/5 !important}
+.pt-clip-shade{background:linear-gradient(180deg,rgba(10,10,12,.35) 0%,rgba(10,10,12,0) 22%,rgba(10,10,12,.1) 45%,rgba(10,10,12,.9) 72%,rgba(10,10,12,.97) 100%) !important}
+.pt-clip-chip{display:inline-flex;position:absolute;left:16px;top:16px;align-items:center;gap:6px;padding:7px 12px;border-radius:100px;background:rgba(255,255,255,.16);border:1px solid rgba(255,255,255,.3);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#fff}
+.pt-clip-chip::before{content:"";width:7px;height:7px;border-radius:50%;background:#E3121B;box-shadow:0 0 0 3px rgba(227,18,27,.3)}
+.pt-clip-tx{gap:10px !important;padding:20px !important}
+.pt-clip-title{font-size:26px !important}
+.pt-clip-body{font-size:14px !important;line-height:1.6 !important;text-align:justify;text-align-last:left;-webkit-hyphens:auto;hyphens:auto}
+.pt-clip-cta{display:flex;align-items:center;gap:12px;margin-top:6px}
+.pt-clip-ic{flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:14px;background:#E3121B;color:#fff;box-shadow:0 8px 20px rgba(227,18,27,.45)}
+.pt-clip-ic svg{margin-left:2px}
+.pt-clip-meta{font-size:14px !important;font-weight:700 !important;color:#fff !important;white-space:nowrap}
+.pt-clip-line{flex:1;height:2px;border-radius:2px;background:linear-gradient(90deg,rgba(255,255,255,.55),rgba(255,255,255,0))}
+.pt-clip-btn:active .pt-clip-ic{transform:scale(.94)}
+}
+/* pt-landing-10 */
+.pt-clip-yt,.pt-video-yt{display:inline-flex;align-items:center;gap:8px;font-weight:600;color:#E3121B !important}
+.pt-video-yt{min-height:44px;margin-top:10px;font-size:14px}
+.pt-clip-yt{display:flex;justify-content:center;min-height:48px;font-size:14px;background:#111;color:#fff !important}
+.pt-clip-yt:focus-visible,.pt-video-yt:focus-visible{outline:2px solid #E3121B;outline-offset:2px}
+/* pt-landing-12 */
+@media (max-width:760px){
+.pt-pack{display:none !important}
+.pt-scope{grid-template-columns:minmax(0,1fr) !important;gap:14px !important}
+.pt-scope > div{border-radius:24px !important;padding:8px !important}
+.pt-scope-img{height:170px !important;border-radius:18px !important}
+.pt-scope-img > span{display:inline-block;left:10px !important;top:10px !important;font-size:12px !important;padding:6px 11px !important}
+.pt-scope-body{padding:16px 10px 12px !important}
+.pt-scope-t{font-size:21px !important;margin-bottom:12px !important}
+.pt-scope-list{gap:10px !important}
+.pt-scope-li{font-size:14.5px !important;line-height:1.4;gap:10px !important}
+.pt-scope-li > span{width:20px !important;height:20px !important;font-size:11px !important;margin-top:0}
+}
+/* pt-landing-13 */
+@media (max-width:760px){
+.pt-steps3 > div{flex-basis:100% !important}
+.pt-sbar > span{width:var(--w,35%)}
+}
+/* pt-landing-14 */
+@media (max-width:760px){
+}
+/* pt-landing-15 */
+/* pt-landing-16 */
+.pt-dl-row{padding:52px 0}
+.pt-dl-in{max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box;display:grid;grid-template-columns:320px minmax(0,1fr);gap:48px;align-items:center}
+.pt-dl-info h3{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:32px;letter-spacing:-.02em;line-height:1.2;margin:0 0 10px}
+.pt-dl-info p{font-size:15px;line-height:1.6;color:#555;margin:0 0 20px}
+.pt-dl-acts{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.pt-dl-count{display:inline-flex;align-items:center;min-height:36px;padding:0 14px;border-radius:100px;background:#FFF1F2;color:#C40016;font-size:13px;font-weight:700}
+.pt-dl-cta{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 18px;border-radius:100px;background:#111;color:#fff !important;font-size:14px;font-weight:600}
+.pt-dl-cta:focus-visible,.pt-dl-card:focus-visible,.pt-dl-arrow:focus-visible{outline:2px solid #E3121B;outline-offset:2px}
+.pt-dl-gal{min-width:0}
+.pt-dl-strip{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;padding:6px 4px 16px;scroll-padding-inline:4px}
+.pt-dl-strip::-webkit-scrollbar{display:none}
+a.pt-dl-card{padding:0 !important}
+.pt-dl-card{flex:0 0 290px;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;border-radius:16px;overflow:hidden;background:#fff;border:1px solid #E8EAEE;color:#111 !important;transition:transform .25s,box-shadow .25s}
+.pt-dl-card:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.1)}
+.pt-dl-photo{display:block;height:180px;background:#F4F4F4}
+.pt-dl-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.pt-dl-name{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:16px;line-height:1.3;padding:14px 16px 6px}
+.pt-dl-addr{font-size:13.5px;line-height:1.55;color:#555;padding:0 16px 16px}
+.pt-dl-nav{display:flex;align-items:center;gap:14px;margin-top:6px}
+.pt-dl-arrow{flex:none;display:flex;align-items:center;justify-content:center;width:44px;height:44px;padding:0;border:1px solid #E0E3E8;border-radius:50%;background:#fff;color:#111;cursor:pointer}
+.pt-dl-arrow:disabled{color:#B5B9C0;cursor:default}
+.pt-dl-track{flex:1;position:relative;height:4px;border-radius:4px;background:#E2E5EA;overflow:hidden}
+.pt-dl-track > span{position:absolute;left:0;top:0;bottom:0;width:var(--w,55%);border-radius:4px;background:#E3121B;transform:translateX(var(--x,0%));transition:transform .12s linear}
+@media (max-width:980px){
+.pt-dl-in{grid-template-columns:minmax(0,1fr);gap:20px}
+}
+@media (max-width:760px){
+#dai-ly{padding-top:48px !important}
+.pt-dl-row{padding:32px 0}
+.pt-dl-info h3{font-size:26px;margin-bottom:6px}
+.pt-dl-info p{font-size:14px;margin-bottom:14px}
+.pt-dl-strip{gap:14px;margin:0 -24px;padding:6px 24px 14px;scroll-padding-inline:24px}
+.pt-dl-card{flex:0 0 84%}
+.pt-dl-card:only-child{flex-basis:100%}
+.pt-dl-arrow{display:none}
+.pt-dl-nav{justify-content:center;margin-top:4px}
+.pt-dl-track{flex:0 0 180px}
+}
+@media (prefers-reduced-motion:reduce){.pt-dl-card{transition:none}.pt-dl-card:hover{transform:none}}
+/* pt-landing-17 */
+.pt-dl-logo{display:block;width:auto;height:72px;mix-blend-mode:multiply}
+.pt-dl-info .pt-dl-logo{margin-bottom:14px}
+.pt-dl-card0{display:none}
+.pt-dl-fit .pt-dl-nav{display:none}
+@media (max-width:760px){
+.pt-dl-info{display:none}
+.pt-dl-in{gap:0}
+.pt-dl-card0{flex:0 0 84%;box-sizing:border-box;scroll-snap-align:start;display:flex;flex-direction:column;align-items:center;text-align:center;padding:18px 16px 20px;border-radius:16px;background:#fff;border:1px solid #E8EAEE}
+.pt-dl-logobox{display:flex;align-items:center;justify-content:center;height:128px;margin-bottom:12px}
+.pt-dl-logobox .pt-dl-logo{height:116px}
+.pt-dl-card0 h3{font-family:'Inter Tight',sans-serif;font-weight:700;font-size:24px;letter-spacing:-.02em;line-height:1.2;margin:0 0 6px}
+.pt-dl-card0 p{font-size:14px;line-height:1.5;color:#555;margin:0 0 14px}
+.pt-dl-card0 .pt-dl-acts{justify-content:center;margin-top:auto}
+}
+/* pt-landing-18 */
+.pt-gallery > div{aspect-ratio:16/9 !important}
+@media (max-width:760px){
+.pt-slides{aspect-ratio:1/1 !important}
+.pt-slides + div{padding:20px 24px 28px !important}
+.pt-slides + div h1{margin-top:0 !important}
+.pt-slides + div .pt-stats,.pt-slides + div .pt-stats3{margin-top:20px !important}
+#gioi-thieu-dv{padding-bottom:28px !important}
+#pham-vi{padding:28px 0 !important}
+#pham-vi [style*="margin-bottom:40px"]{margin-bottom:16px !important}
+.pt-scope-img{height:150px !important}
+.pt-scope-body{padding:12px 10px 10px !important}
+.pt-scope-t{margin-bottom:8px !important}
+.pt-scope-list{gap:6px !important}
+#bang-gia{padding-top:28px !important}
+#bang-gia h2{margin-bottom:14px !important}
+.pt-gia-desk{grid-template-columns:minmax(0,1fr) !important;border-radius:22px !important}
+.pt-gia-desk > div:last-child{order:-1;min-height:0 !important;aspect-ratio:16/9}
+.pt-gia-desk > div:first-child{padding:18px !important;gap:12px !important}
+.pt-gia-desk .pt-price{font-size:52px !important}
+.pt-gia-desk .pt-price > span{font-size:16px !important;margin-left:0 !important}
+.pt-gia-desk > div:first-child > div:nth-child(2) > div:last-child{font-size:14px !important;margin-top:6px !important}
+.pt-gia-desk > div:first-child > div:nth-child(3){grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;gap:8px !important}
+.pt-gia-desk > div:first-child > div:nth-child(3) > div{padding:12px !important;border-radius:14px !important}
+.pt-gia-desk > div:first-child > div:nth-child(3) > div > div:first-child{font-size:12px !important}
+.pt-gia-desk > div:first-child > div:nth-child(3) > div > div:last-child{font-size:16px !important;margin-top:4px !important}
+.pt-gia-desk > div:first-child > div:nth-child(4){gap:8px !important;margin-top:0 !important}
+.pt-gia-desk > div:first-child > div:nth-child(4) > a{flex:1 1 100%;justify-content:center;min-height:48px !important;font-size:16px !important}
+#cong-cu{padding:28px 24px !important}
+#cong-cu > div:first-child{margin-bottom:14px !important}
+#quy-trinh > div{padding-top:28px !important;padding-bottom:28px !important}
+#quy-trinh h2{margin-bottom:12px !important}
+.pt-steps3{padding-bottom:12px !important}
+.pt-steps3 > div{padding:16px 18px !important}
+#hinh-anh{padding-top:28px !important}
+#hinh-anh > div:first-child{margin-bottom:12px !important}
+.pt-gallery{display:flex !important;gap:10px !important;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;overscroll-behavior-x:contain;scrollbar-width:none;margin:0 -24px;padding:0 24px 12px;scroll-padding-inline:24px}
+.pt-gallery::-webkit-scrollbar{display:none}
+.pt-gallery > div{flex:0 0 84%;scroll-snap-align:start;border-radius:16px !important}
+#dai-ly{padding-top:28px !important}
+#dai-ly > h2{margin-bottom:0 !important}
+.pt-dl-row{padding:16px 0}
+.pt-dl-card0{padding:12px 14px 14px}
+.pt-dl-logobox{height:92px;margin-bottom:6px}
+.pt-dl-logobox .pt-dl-logo{height:88px}
+.pt-dl-card0 h3{font-size:21px;margin-bottom:4px}
+.pt-dl-card0 p{font-size:13.5px;margin-bottom:10px}
+.pt-dl-photo{height:150px}
+.pt-dl-strip{padding-bottom:10px}
+#dang-ky-goi{padding-top:28px !important}
+#dang-ky-goi h2{margin-bottom:14px !important}
+.pt-reg-form{padding:16px !important}
+.pt-reg-f{gap:12px !important}
+.pt-reg-f textarea{height:96px}
+#dang-ky-goi + div{padding:28px 24px !important}
+.pt-footer > div{padding-top:28px !important}
+.pt-footer > div > div:first-child{gap:20px 16px !important}
+.pt-footer [style*="gap:14px;font-size:15px"]{display:grid !important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:12px !important}
+}
+/* pt-landing-19 */
+#dang-ky-goi + div{padding:48px 24px !important}
+#dang-ky-goi + div > div{padding:32px !important}
+#dang-ky-goi + div h2{margin-bottom:6px !important}
+#dang-ky-goi + div p{margin-bottom:16px !important}
+.pt-footer > div{padding-top:36px !important}
+.pt-footer > div > div:first-child{gap:24px 40px !important}
+.pt-footer > div > div:first-child > div:nth-child(1){gap:12px !important}
+.pt-footer > div > div:first-child > div:nth-child(1) img{height:44px !important}
+.pt-footer p{font-size:14px !important;line-height:1.6 !important;margin:0 !important}
+.pt-footer [style*="margin:12px 0 22px"]{margin:8px 0 12px !important}
+.pt-footer [style*="gap:14px;font-size:15px"]{gap:6px !important;font-size:14px !important}
+.pt-footer [style*="gap:16px;font-size:15px"]{gap:8px !important;font-size:14px !important}
+.pt-footer [style*="margin-top:56px"]{margin-top:20px !important;padding:14px 0 16px !important}
+@media (max-width:760px){
+.pt-slides + div{padding:16px 24px 20px !important}
+.pt-slides + div > div:first-of-type{flex-wrap:nowrap !important;gap:8px !important;margin-top:14px !important}
+.pt-slides + div > div:first-of-type > a{flex:1 1 0;min-width:0;display:flex;align-items:center;justify-content:center;text-align:center;min-height:50px;box-sizing:border-box;padding:6px 10px !important;font-size:14px !important;line-height:1.25}
+.pt-slides + div .pt-stats{gap:10px 12px !important;margin-top:14px !important}
+.pt-slides + div .pt-stats > div > div:last-child{font-size:12.5px !important;line-height:1.4 !important;margin-top:2px !important}
+#gioi-thieu-dv{padding-bottom:20px !important}
+.pt-clip-btn{aspect-ratio:1/1 !important}
+.pt-clip-tx{gap:6px !important;padding:14px 16px !important}
+.pt-clip-cta{margin-top:2px !important}
+.pt-clip-ic{width:40px;height:40px}
+#pham-vi{padding:20px 0 !important}
+#pham-vi [style*="margin-bottom:40px"]{margin-bottom:12px !important}
+.pt-scope{gap:10px !important}
+.pt-scope-img{height:130px !important}
+.pt-scope-list{grid-template-columns:minmax(0,1fr) minmax(0,1fr) !important;gap:6px 8px !important}
+.pt-scope-li{font-size:13.5px !important;gap:6px !important}
+.pt-scope-li > span{width:18px !important;height:18px !important}
+#bang-gia{padding-top:20px !important}
+#bang-gia h2{margin-bottom:10px !important}
+.pt-gia-desk > div:first-child{padding:14px !important;gap:10px !important}
+#cong-cu{padding:20px 24px !important}
+#cong-cu > div:first-child{margin-bottom:10px !important}
+#quy-trinh > div{padding-top:20px !important;padding-bottom:20px !important}
+#quy-trinh h2{margin-bottom:8px !important}
+.pt-steps3{padding-top:4px !important;padding-bottom:8px !important}
+.pt-steps3 > div{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:12px;align-items:center;align-content:center;padding:14px 16px !important}
+.pt-steps3 > div > div:nth-child(1){font-size:34px !important}
+.pt-steps3 > div > div:nth-child(2){font-size:17px !important;margin:0 !important}
+.pt-steps3 > div > div:nth-child(3){grid-column:1 / -1;font-size:13.5px !important;line-height:1.45 !important;margin-top:6px}
+#hinh-anh{padding-top:20px !important}
+#hinh-anh > div:first-child{margin-bottom:10px !important}
+.pt-gallery{padding-bottom:8px}
+#dai-ly{padding-top:20px !important}
+.pt-dl-row{padding:12px 0}
+.pt-dl-card0{padding:10px 12px 12px}
+.pt-dl-logobox{height:76px;margin-bottom:4px}
+.pt-dl-logobox .pt-dl-logo{height:72px}
+.pt-dl-card0 h3{font-size:19px;margin-bottom:2px}
+.pt-dl-card0 p{font-size:13px;line-height:1.4;margin-bottom:8px}
+.pt-dl-card0 .pt-dl-acts{flex-wrap:nowrap;gap:6px}
+.pt-dl-card0 .pt-dl-count{min-height:32px;padding:0 9px;font-size:11.5px;white-space:nowrap}
+.pt-dl-card0 .pt-dl-cta{min-height:44px;padding:0 12px;font-size:12.5px;white-space:nowrap;gap:4px}
+.pt-dl-photo{height:130px}
+.pt-dl-name{padding:10px 12px 4px;font-size:15px}
+.pt-dl-addr{padding:0 12px 12px;font-size:13px}
+#dang-ky-goi{padding-top:20px !important}
+#dang-ky-goi h2{margin-bottom:10px !important}
+.pt-reg-form{padding:14px !important}
+.pt-reg-f{gap:10px !important}
+.pt-reg-f input{height:46px !important}
+.pt-reg-f textarea{height:76px}
+.pt-reg-f > button{height:50px !important;font-size:16px !important}
+.pt-reg-note{padding:10px 12px !important;font-size:12.5px !important;gap:8px !important}
+#dang-ky-goi + div{padding:20px 24px !important}
+#dang-ky-goi + div > div{padding:18px 16px !important;border-radius:20px !important}
+#dang-ky-goi + div h2{margin-bottom:2px !important}
+#dang-ky-goi + div p{font-size:14px !important;margin-bottom:10px !important}
+#dang-ky-goi + div a{display:inline-flex;align-items:center;min-height:46px;box-sizing:border-box;padding:0 26px !important;font-size:16px !important}
+.pt-footer > div{padding-top:18px !important}
+.pt-footer > div > div:first-child{gap:10px !important}
+.pt-footer > div > div:first-child > div:nth-child(1) > p,.pt-footer > div > div:first-child > div:nth-child(1) > a[href^="tel:"],.pt-footer > div > div:first-child > div:nth-child(2){display:none !important}
+.pt-footer > div > div:first-child > div:nth-child(1) > a:first-child{padding:6px 10px !important}
+.pt-footer > div > div:first-child > div:nth-child(1) img{height:36px !important}
+.pt-footer > div > div:first-child > div:nth-child(3) > div:nth-child(1),.pt-footer > div > div:first-child > div:nth-child(3) > div:nth-child(2){display:none !important}
+.pt-footer [style*="gap:16px;font-size:15px"]{gap:4px !important;font-size:13px !important;line-height:1.45 !important}
+.pt-footer [style*="margin-top:56px"]{margin-top:10px !important;padding:8px 0 12px !important;font-size:11.5px !important}
+}
+/* pt-landing-20 */
+@media (min-width:761px){
+.pt-slides + div{padding:32px 24px 40px !important}
+.pt-slides + div h1{margin-top:0 !important;line-height:1.2 !important}
+.pt-slides + div > div:first-of-type{margin-top:20px !important}
+.pt-slides + div .pt-stats{margin-top:28px !important;gap:20px 56px !important}
+#gioi-thieu-dv{padding-bottom:48px !important}
+.pt-intro-desk{gap:32px !important}
+#pham-vi{padding:40px 0 !important}
+#pham-vi [style*="margin-bottom:40px"]{margin-bottom:20px !important}
+#pham-vi h2{margin-top:6px !important}
+.pt-pack{margin-bottom:16px !important;padding:28px 36px !important;gap:20px 48px !important}
+.pt-scope{gap:16px !important}
+.pt-scope-img{height:200px !important}
+.pt-scope-body{padding:16px 12px 10px !important}
+.pt-scope-t{margin-bottom:10px !important}
+.pt-scope-list{gap:8px 16px !important}
+#bang-gia{padding-top:48px !important}
+#bang-gia h2{margin-bottom:20px !important}
+.pt-gia-desk > div:first-child{padding:32px 40px !important;gap:16px !important}
+#cong-cu{padding:48px 24px !important}
+#cong-cu > div:first-child{margin-bottom:20px !important}
+#quy-trinh > div{padding-top:40px !important;padding-bottom:40px !important}
+#quy-trinh h2{margin-bottom:20px !important}
+.pt-steps3 > div{padding:20px 24px !important}
+.pt-steps3 > div > div:nth-child(1){font-size:44px !important}
+.pt-steps3 > div > div:nth-child(2){margin:8px 0 4px !important}
+#hinh-anh{padding-top:48px !important}
+#hinh-anh > div:first-child{margin-bottom:20px !important}
+#dai-ly{padding-top:48px !important}
+#dai-ly > h2{margin-bottom:0 !important}
+.pt-dl-row{padding:28px 0}
+.pt-dl-strip{padding-bottom:10px}
+.pt-dl-nav{margin-top:2px}
+.pt-dl-photo{height:160px}
+.pt-dl-logo{height:60px}
+.pt-dl-info p{margin-bottom:14px}
+#dang-ky-goi{padding-top:40px !important}
+#dang-ky-goi h2{margin-bottom:20px !important}
+.pt-reg-form{padding:28px 32px !important}
+.pt-reg-f{gap:14px !important}
+#dang-ky-goi + div{padding:40px 24px !important}
+}
+/* pt-landing-21 */
+@media (max-width:760px){
+.pt-cover-d{display:none !important}
+.pt-cover-m{display:block !important}
+}
+/* pt-landing-22 */
+@media (max-width:760px){
+.pt-steps3,.pt-gallery,.pt-dl-strip{gap:24px !important}
+.pt-gallery > div,.pt-dl-card,.pt-dl-card0{flex:0 0 100% !important}
+}
+/* pt-landing-23 */
+.pt-footer{height:auto !important}
+/* pt-landing-24 */
+.pt-steps3,.pt-gallery,.pt-dl-strip{cursor:grab}
+.pt-gallery img,.pt-dl-strip img{-webkit-user-drag:none;user-select:none}
+.pt-dl-card{cursor:pointer}
+@media (max-width:760px){
+.pt-slides .pt-slide:nth-child(1){display:none !important}
+.pt-slides .pt-slide:nth-child(2){display:block !important;opacity:1 !important;animation:none !important}
+.pt-slides > [aria-hidden]{display:none !important}
+}
+/* pt-landing-25 */
+@media (max-width:760px){
+#cong-cu h2{white-space:normal !important;font-size:21px !important;line-height:1.25 !important;text-wrap:balance}
+}
+/* pt-landing-26 */
+@media (max-width:760px){
+[id]{scroll-margin-top:64px}
+#cong-cu{padding:12px 24px 16px !important}
+#cong-cu > div:first-child{margin-bottom:8px !important}
+#cong-cu > div:first-child [style*="text-transform:uppercase"]{display:none}
+#cong-cu h2{margin-top:0 !important;font-size:19px !important}
+}
+/* pt-landing-27 */
+@media (max-width:760px){
+.pt-dl-info{display:block !important}
+.pt-dl-in{gap:14px !important}
+.pt-dl-row{padding:20px 0 !important}
+.pt-dl-info .pt-dl-logo{height:52px;margin-bottom:10px}
+.pt-dl-info h3{font-size:24px;margin-bottom:4px}
+.pt-dl-info p{font-size:14px;line-height:1.5;margin-bottom:12px}
+.pt-dl-info .pt-dl-acts{flex-wrap:nowrap;gap:10px}
+.pt-dl-info .pt-dl-count{white-space:nowrap}
+.pt-dl-info .pt-dl-cta{white-space:nowrap}
+.pt-dl-strip{gap:14px !important;padding-bottom:10px}
+.pt-dl-card{flex:0 0 84% !important}
+.pt-dl-card:only-child{flex-basis:100% !important}
+.pt-dl-photo{height:170px}
+.pt-dl-name{padding:12px 14px 4px;font-size:16px}
+.pt-dl-addr{padding:0 14px 14px;font-size:13.5px}
+.pt-dl-nav{margin-top:6px}
+.pt-dl-track{flex:1 1 auto}
+}
+/* pt-landing-28 */
+@media (max-width:760px){
+.pt-dl-info{display:none !important}
+.pt-dl-in{gap:0 !important}
+.pt-dl-card0{flex:0 0 84% !important;justify-content:center;padding:14px 12px 16px}
+.pt-dl-logobox{height:96px;margin-bottom:8px}
+.pt-dl-logobox .pt-dl-logo{height:92px}
+.pt-dl-card0 h3{font-size:21px;margin-bottom:4px}
+.pt-dl-card0 p{font-size:13.5px;line-height:1.45;margin-bottom:12px}
+.pt-dl-card0 .pt-dl-acts{margin-top:0}
+}
+/* pt-landing-29 */
+.pt-cta-m{display:none}
+@media (max-width:760px){
+.pt-cta-d{display:none}
+.pt-cta-m{display:inline;font-weight:700;line-height:1.25}
+.pt-header a[href^="tel:"]{background:linear-gradient(90deg,#F2222B,#9E0012) !important;border:0 !important;color:#fff !important;box-shadow:0 6px 16px rgba(227,18,27,.28)}
+}
+/* pt-landing-30 */
+@media (max-width:760px){
+#dai-ly{padding-top:14px !important}
+#dai-ly > h2{margin-bottom:2px !important;line-height:1.2}
+.pt-dl-row{padding:6px 0 8px !important}
+.pt-dl-strip{padding:4px 24px 6px !important}
+.pt-dl-card0{display:grid !important;grid-template-columns:52px minmax(0,1fr);column-gap:10px;align-items:center;align-content:center;text-align:left;padding:8px 12px !important}
+.pt-dl-logobox{grid-row:span 2;height:52px !important;margin:0 !important}
+.pt-dl-logobox .pt-dl-logo{height:50px !important;max-width:52px;object-fit:contain}
+.pt-dl-card0 h3{font-size:17px !important;line-height:1.2;margin:0 !important}
+.pt-dl-card0 p{font-size:12px !important;line-height:1.3;margin:2px 0 0 !important}
+.pt-dl-card0 .pt-dl-acts{grid-column:1 / -1;justify-content:flex-start !important;margin-top:8px !important;gap:6px !important}
+.pt-dl-card0 .pt-dl-count{min-height:28px;padding:0 8px;font-size:11px}
+.pt-dl-card0 .pt-dl-cta{min-height:40px;padding:0 12px;font-size:12.5px}
+.pt-dl-photo{height:78px !important}
+.pt-dl-name{padding:6px 10px 2px !important;font-size:14px !important;line-height:1.25}
+.pt-dl-addr{padding:0 10px 6px !important;font-size:11.5px !important;line-height:1.3;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.pt-dl-nav{margin-top:0 !important}
+.pt-dl-track{height:3px}
+}
+/* pt-landing-31 */
+@media (max-width:760px){
+.pt-dl-row{padding:7px 0 9px !important}
+.pt-dl-card0{grid-template-columns:62px minmax(0,1fr);padding:10px 14px !important}
+.pt-dl-logobox{height:60px !important}
+.pt-dl-logobox .pt-dl-logo{height:58px !important;max-width:62px}
+.pt-dl-card0 h3{font-size:19px !important}
+.pt-dl-card0 p{font-size:13px !important;line-height:1.35}
+.pt-dl-card0 .pt-dl-acts{margin-top:10px !important}
+.pt-dl-card0 .pt-dl-count{min-height:32px;padding:0 10px;font-size:12px}
+.pt-dl-card0 .pt-dl-cta{min-height:42px;padding:0 14px;font-size:13.5px}
+.pt-dl-photo{height:96px !important}
+.pt-dl-name{padding:8px 12px 2px !important;font-size:15.5px !important}
+.pt-dl-addr{padding:0 12px 8px !important;font-size:12.5px !important;line-height:1.35}
+.pt-dl-track{height:4px}
+}
+/* pt-landing-32 */
+@media (max-width:760px){
+.pt-dl-card0{padding:8px 14px !important}
+.pt-dl-card0 .pt-dl-acts{margin-top:8px !important}
+.pt-dl-card0 p{display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;overflow:hidden}
+.pt-dl-photo{height:86px !important}
+.pt-dl-name{padding:6px 12px 2px !important}
+.pt-dl-addr{padding:0 12px 6px !important}
+}
+@media (max-width:374px){
+.pt-dl-card0{grid-template-columns:52px minmax(0,1fr);padding:8px 10px !important}
+.pt-dl-logobox .pt-dl-logo{height:50px !important;max-width:52px}
+.pt-dl-card0 .pt-dl-count{padding:0 7px;font-size:11px}
+.pt-dl-card0 .pt-dl-cta{padding:0 10px;font-size:12px}
+}
+</style>
+</helmet>
+<div style="width:100%;background:#fff;color:#000;font-family:'Inter',system-ui,sans-serif;overflow-x:clip">
+
+
+  <!-- MENU MOBILE -->
+  <sc-if value="{{menuOpen}}" hint-placeholder-val="{{ false }}">
+    <div class="pt-drawer" role="dialog" aria-modal="true" aria-label="Menu">
+      <button type="button" class="pt-drawer-bg" aria-label="Đóng menu" onClick="{{closeMenu}}"></button>
+      <div class="pt-drawer-panel">
+        <div class="pt-drawer-top">
+          <a href="#" onClick="{{closeMenu}}" style="display:block;line-height:0"><img src="/_blob/bf5907d523e9dea2cf472378794d8eaf" alt="Phát Tiến Holding, Ôtô Môtô Xe máy" style="display:block;height:44px;width:auto"></a>
+          <button type="button" class="pt-drawer-x" aria-label="Đóng menu" onClick="{{closeMenu}}"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
+        </div>
+        <nav class="pt-drawer-nav" aria-label="Menu chính">
+          <a href="#gioi-thieu-dv" onClick="{{closeMenu}}">Giới thiệu</a>
+          <a href="#bang-gia" onClick="{{closeMenu}}">Bảng giá</a>
+          <a href="#cong-cu" onClick="{{closeMenu}}">Ước tính chi phí</a>
+          <a href="#hinh-anh" onClick="{{closeMenu}}">Hình ảnh dịch vụ</a>
+          <a href="#dai-ly" onClick="{{closeMenu}}">Hệ thống đại lý</a>
+        </nav>
+        <a class="pt-drawer-cta" href="#dang-ky-goi" onClick="{{closeMenu}}">Đăng ký gói cứu hộ</a>
+        <a class="pt-drawer-ph" href="tel:0901117111">Hotline: 0901.117.111</a>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- HEADER -->
+  <div style="position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);box-shadow:0 1px 0 rgba(0,0,0,.06)">
+  <div class="pt-header" style="max-width:1240px;margin:0 auto;padding:18px 24px;display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;box-sizing:border-box">
+    <a href="#" style="display:block;line-height:0">
+      <img src="/_blob/bf5907d523e9dea2cf472378794d8eaf" alt="Phát Tiến Holding · Ôtô – Môtô – Xe Máy" style="display:block;height:52px;width:auto">
+    </a>
+    <nav class="pt-nav" style="display:flex;flex-wrap:wrap;gap:8px 26px;align-items:center;font-size:15px;font-weight:500">
+      <a href="#gioi-thieu-dv">Giới thiệu</a>
+      <a href="#bang-gia">Bảng giá</a>
+      <a href="#cong-cu">Ước tính chi phí</a>
+      <a href="#hinh-anh">Hình ảnh dịch vụ</a>
+      <a href="#dai-ly">Hệ thống đại lý</a>
+    </nav>
+    <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center"><a href="#dang-ky-goi" class="pt-hide-m" style="background: linear-gradient(90deg, rgb(242, 34, 43), rgb(158, 0, 18)); color: rgb(255, 255, 255); font-weight: 600; font-size: 15px; padding: 13px 22px; border-radius: 100px; box-shadow: rgba(227, 18, 27, 0.28) 0px 8px 20px">Đăng ký gói cứu hộ</a>
+      <a href="tel:0901117111" style="border: 1.5px solid rgb(227, 18, 27); color: rgb(227, 18, 27); font-weight: 600; font-size: 15px; padding: 11.5px 20px; border-radius: 100px">Hotline: 0901.117.111</a>
+    </div>
+    <button type="button" class="pt-burger" aria-label="Mở menu" onClick="{{openMenu}}"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button>
+  </div>
+  </div>
+
+  <!-- ẢNH BÌA (SLIDE) -->
+  
+
+  <!-- HERO -->
+  <div class="pt-slides" aria-roledescription="carousel" aria-label="Hình ảnh nổi bật" style="position:relative;width:100%;height:clamp(220px,32vw,470px);overflow:hidden;background:#EB2A32">
+    <div class="pt-slide"><img src="/_blob/7a0f761cc9591006b1b0f7ca36631760" alt="Đội xe cứu hộ Phát Tiến trước đại lý Honda Ôtô" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    <div class="pt-slide" style="background:linear-gradient(180deg,#EC2830,#E3222B)"><img class="pt-cover-m" src="/_blob/7ddbd3629d58186c5e54e9ab7e5fcdd1" alt="Dịch vụ Cứu hộ 24/7 Phát Tiến, chỉ 500.000 VNĐ/năm" style="width:100%;height:100%;object-fit:cover;display:none"><img class="pt-cover-d" src="/_blob/7811ea49d7fa17139db87c5b08132d55" alt="Hệ thống đại lý Phát Tiến Holding" style="width:100%;height:100%;object-fit:contain;display:block"></div>
+    <div aria-hidden="true" style="position:absolute;left:0;right:0;bottom:16px;display:flex;justify-content:center;gap:8px;z-index:2;pointer-events:none"><span class="pt-dot"></span><span class="pt-dot"></span></div>
+  </div><div style="max-width:1240px;margin:0 auto;padding:56px 24px 80px;text-align:center;box-sizing:border-box;position:relative">
+    
+    <h1 style="--fk: 0.0998; --fg: 48px; --fc: 44px; font-family: 'Inter Tight',sans-serif; font-weight: 700; font-size: 64px; line-height: 1.3; letter-spacing: -.03em; margin: 14px 0 0">DỊCH VỤ CỨU HỘ 24/7<br><span style="background: linear-gradient(90deg, rgb(242, 34, 43), rgb(158, 0, 18)) text; color: transparent">CHỈ 500K/ NĂM</span></h1>
+    
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:28px"><a href="tel:0901117111" style="background: linear-gradient(90deg, rgb(242, 34, 43), rgb(158, 0, 18)); color: rgb(255, 255, 255); font-weight: 600; font-size: 17px; padding: 18px 32px; border-radius: 100px; box-shadow: rgba(227, 18, 27, 0.35) 0px 12px 30px"><span class="pt-cta-d">Gọi cứu hộ ngay · 0901.117.111</span><span class="pt-cta-m">Hotline<br>0901.117.111</span></a>
+      <a href="#dang-ky-goi" style="background: rgb(255, 255, 255); border: 1.5px solid rgb(230, 230, 230); color: rgb(0, 0, 0); font-weight: 600; font-size: 17px; padding: 16px 28px; border-radius: 100px">Đăng ký gói 500K/năm</a>
+    </div>
+    <div class="pt-stats" style="display:flex;flex-wrap:wrap;justify-content:center;gap:28px 64px;margin-top:48px">
+      <sc-for list="{{heroStats}}" as="h" hint-placeholder-count="3">
+        <div style="max-width:220px">
+          <div style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:17px"><span style="font-size:34px;background:linear-gradient(90deg,#F2222B,#9E0012);-webkit-background-clip:text;background-clip:text;color:transparent">{{h.big}}</span>{{h.unit}}</div>
+          <div style="font-size:14px;color:#555;margin-top:6px;line-height:1.5">{{h.desc}}</div>
+        </div>
+      </sc-for>
+    </div>
+  </div>
+
+  <!-- GIỚI THIỆU DỊCH VỤ -->
+  <div id="gioi-thieu-dv" style="max-width:1240px;margin:0 auto;padding:0 24px 88px;box-sizing:border-box">
+    <div class="pt-clipcard">
+      <sc-if value="{{clipPlaying}}" hint-placeholder-val="{{ false }}">
+        <div><div class="pt-clip-frame"><iframe src="{{videoAutoplay}}" title="Clip giới thiệu dịch vụ Cứu hộ 24/7" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><a class="pt-clip-yt" href="{{videoWatch}}" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg>Mở clip trên YouTube</a></div>
+      </sc-if>
+      <sc-if value="{{clipIdle}}" hint-placeholder-val="{{ true }}">
+        <button type="button" class="pt-clip-btn" onClick="{{openClip}}" aria-label="Xem clip giới thiệu Dịch vụ Cứu hộ 24/7">
+          <img src="/_blob/7a0f761cc9591006b1b0f7ca36631760" alt="" class="pt-clip-img">
+          <span class="pt-clip-shade"></span>
+          <span class="pt-clip-chip">Clip giới thiệu</span>
+          <span class="pt-clip-tx">
+            <span class="pt-clip-title">Dịch vụ Cứu hộ 24/7</span>
+            <span class="pt-clip-body">Phát Tiến Holding chính thức triển khai Dịch vụ Cứu hộ 24/7 trên toàn hệ thống, một đầu mối hỗ trợ khi xe gặp sự cố.</span>
+            <span class="pt-clip-cta"><span class="pt-clip-ic"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg></span><span class="pt-clip-meta">{{clipMeta}}</span><span class="pt-clip-line"></span></span>
+          </span>
+        </button>
+      </sc-if>
+    </div>
+    <div class="pt-intro-desk" style="display:flex;flex-wrap:wrap;gap:48px;align-items:center">
+      <div style="flex:1 1 480px;min-width:0">
+        <sc-if value="{{hasVideo}}" hint-placeholder-val="{{ false }}"><div><div style="position:relative;display:block;aspect-ratio:16/9;border-radius:28px;overflow:hidden;box-shadow:0 20px 50px rgba(227,18,27,.28);background:#000"><iframe src="{{videoEmbed}}" loading="lazy" title="Clip giới thiệu dịch vụ Cứu hộ 24/7" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" style="position:absolute;inset:0;width:100%;height:100%;border:0"></iframe></div><a class="pt-video-yt" href="{{videoWatch}}" target="_blank" rel="noopener"><svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"></path></svg>Mở clip trên YouTube</a></div></sc-if>
+        <sc-if value="{{noVideo}}" hint-placeholder-val="{{ true }}"><div aria-label="Clip giới thiệu dịch vụ (sắp cập nhật)" style="position:relative;display:block;aspect-ratio:16/9;border-radius:28px;overflow:hidden;background:#F4F4F4;border:1.5px dashed #F7B4B7;box-sizing:border-box"><span style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center"><span style="width:72px;height:72px;border-radius:50%;background:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 26px rgba(227,18,27,.18)"><svg width="28" height="28" viewBox="0 0 24 24" fill="#E3121B" aria-hidden="true" style="margin-left:4px"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5z"></path></svg></span></span></div></sc-if>
+      </div>
+      <div style="flex:1 1 420px;min-width:0">
+        <div style="font-size:14px;font-weight:600;color:#E3121B;text-transform:uppercase;letter-spacing:.06em">Giới thiệu dịch vụ</div>
+        <h2 class="pt-intro-title" style="--fk:0.1074;--fg:48px;--fc:30px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(30px,3.6vw,44px);line-height:1.12;letter-spacing:-.02em;margin:10px 0 18px">Dịch vụ <span style="color: rgb(227, 18, 27)">Cứu hộ 24/7</span>&nbsp;</h2>
+        <p style="font-size: 17px; line-height: 1.8; color: #333; margin: 0 0 28px; text-align: justify">Nhằm nâng cao chất lượng dịch vụ sau bán hàng và đồng hành cùng khách hàng trong suốt quá trình sử dụng xe, Phát Tiến Holding chính thức triển khai Dịch vụ Cứu hộ 24/7 trên toàn hệ thống. Dịch vụ tạo một đầu mối hỗ trợ xuyên suốt để khách hàng có thể chủ động liên hệ khi phương tiện gặp sự cố bất ngờ, thay vì phải tự tìm kiếm đơn vị cứu hộ trong tình huống khẩn cấp.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          <a href="#dang-ky-goi" style="background:linear-gradient(90deg,#F2222B,#9E0012);color:#fff;font-weight:600;font-size:16px;padding:16px 28px;border-radius:100px;box-shadow:0 12px 30px rgba(227,18,27,.3)">Đăng ký gói 500.000 VNĐ/năm</a>
+          <a href="#bang-gia" style="border:1.5px solid #E3121B;color:#E3121B;font-weight:600;font-size:16px;padding:14.5px 26px;border-radius:100px">Xem bảng giá</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PHẠM VI HỖ TRỢ (red band) -->
+  <div id="pham-vi" style="background:linear-gradient(160deg,#F2222B 0%,#C40016 55%,#8A0010 100%);color:#fff;padding:88px 0">
+    <div style="max-width:1240px;margin:0 auto;padding:0 24px;box-sizing:border-box">
+      <div style="text-align:center;margin-bottom:40px">
+        <div style="font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;opacity:.8">Phạm vi hỗ trợ</div>
+        <h2 style="--fk:0.0728;--fg:48px;--fc:32px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(32px,4vw,48px);line-height:1.15;letter-spacing:-.02em;margin:12px 0 0">Xe gặp sự cố, có PHÁT TIẾN lo!</h2>
+      </div>
+
+      <div class="pt-pack" style="margin:0 0 24px;border-radius:32px;background:#fff;color:#000;padding:clamp(28px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:28px 56px;align-items:center;box-shadow:0 24px 60px rgba(0,0,0,.28)">
+        <div>
+          <span style="display: inline-block; background: #FFF1F2; color: #C40016; font-size: 15px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; padding: 8px 16px; border-radius: 100px">Gói Cứu hộ 24/7</span>
+          <div style="font-family: 'Inter Tight',sans-serif; font-weight: 700; font-size: clamp(64px, 8.4vw, 120px); line-height: 1; letter-spacing: -.03em; margin-top: 18px; white-space: nowrap"><span style="background: linear-gradient(90deg, rgb(158, 0, 18), rgb(242, 34, 43)) text; color: transparent">500.000</span><span style="display: block; margin-top: 8px; font-size: 20px; font-weight: 600; letter-spacing: 0px; color: rgb(196, 0, 22)">VNĐ / năm</span></div>
+          <div style="font-size: 17px; line-height: 1.6; color: #000000; margin-top: 10px; font-style: italic"><b>Chưa đến 1.400 VNĐ </b>mỗi ngày cho một đầu mối <b>hỗ trợ 24/7.</b></div>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:14px">
+          <sc-for list="{{packageBenefits}}" as="pb" hint-placeholder-count="4">
+            <div style="display: flex; gap: 12px; align-items: flex-start; font-size: 18px; line-height: 1.5"><span style="width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#F2222B,#9E0012);color:#fff;display:flex;align-items:center;justify-content:center;flex:none;font-size:13px;font-weight:800;margin-top:1px">✓</span><span>{{pb}}</span></div>
+          </sc-for>
+        </div>
+      </div>
+
+      <div class="pt-scope" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:24px">
+        <div style="border-radius:28px;padding:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.55);box-shadow:0 0 40px rgba(255,140,140,.35)">
+          <div class="pt-scope-img" style="position:relative;height:220px;border-radius:22px;overflow:hidden"><img src="/_blob/c87fbf860d9258728c8f7f8b3bde43e4" alt="Kỹ thuật viên Phát Tiến hỗ trợ khách tại hiện trường" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:14px;top:14px;background:#fff;color:#C40016;font-size:13px;font-weight:700;padding:7px 14px;border-radius:100px">Hỗ trợ 24/7 qua một đầu mối</span></div>
+          <div class="pt-scope-body" style="padding:24px 16px 16px">
+            <div class="pt-scope-t" style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:28px;margin-bottom:16px">Ứng cứu tại hiện trường</div>
+            <div class="pt-scope-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:12px 20px">
+              <sc-for list="{{scopeOnsite}}" as="it" hint-placeholder-count="5">
+                <div class="pt-scope-li" style="display:flex;gap:10px;align-items:center;font-size:16px"><span style="width:22px;height:22px;border-radius:50%;background:#fff;color:#C40016;display:flex;align-items:center;justify-content:center;flex:none;font-size:12px;font-weight:800">✓</span>{{it}}</div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+        <div style="border-radius:28px;padding:10px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.55);box-shadow:0 0 40px rgba(255,140,140,.35)">
+          <div class="pt-scope-img" style="position:relative;height:220px;border-radius:22px;overflow:hidden"><img src="/_blob/9d5589425c7d56123ca2fc6ff769ff37" alt="Xe cứu kéo sàn trượt Phát Tiến chở ô tô" style="width:100%;height:100%;object-fit:cover;display:block"><span style="position:absolute;left:14px;top:14px;background:#fff;color:#C40016;font-size:13px;font-weight:700;padding:7px 14px;border-radius:100px">Miễn phí trong bán kính 100 km với Gói 500K</span></div>
+          <div class="pt-scope-body" style="padding:24px 16px 16px">
+            <div class="pt-scope-t" style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:28px;margin-bottom:16px">Cứu kéo chuyên dụng</div>
+            <div class="pt-scope-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:12px 20px">
+              <sc-for list="{{scopeTow}}" as="it" hint-placeholder-count="6">
+                <div class="pt-scope-li" style="display:flex;gap:10px;align-items:center;font-size:16px"><span style="width:22px;height:22px;border-radius:50%;background:#fff;color:#C40016;display:flex;align-items:center;justify-content:center;flex:none;font-size:12px;font-weight:800">✓</span>{{it}}</div>
+              </sc-for>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
+      
+    </div>
+  </div>
+
+  <!-- HAI BẢNG GIÁ -->
+  <div id="bang-gia" style="max-width:1240px;margin:0 auto;padding:88px 24px 0;box-sizing:border-box">
+    <h2 style="--fk:0.0895;--fg:48px;--fc:32px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(32px,4vw,48px);letter-spacing:-.02em;text-align:center;margin:0 0 36px">Bảng giá <span style="color: rgb(227, 18, 27)">Cứu hộ 24/7</span></h2>
+    <div class="pt-gia-desk" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(440px,100%),1fr));border-radius:32px;overflow:hidden;background:linear-gradient(150deg,#F2222B 0%,#C40016 55%,#8A0010 100%);color:#fff;box-shadow:0 24px 60px rgba(227,18,27,.28)">
+      <div style="padding:clamp(32px,4vw,56px);display:flex;flex-direction:column;gap:20px;box-sizing:border-box;min-width:0">
+        <span style="align-self:flex-start;background:#fff;color:#C40016;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:8px 16px;border-radius:100px">Gói Cứu hộ 24/7</span>
+        <div>
+          <div class="pt-price" style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(64px,7.4vw,104px);line-height:1;letter-spacing:-.03em;white-space:nowrap">500.000<span style="font-size:22px;font-weight:600;letter-spacing:0;margin-left:10px">VNĐ/năm</span></div>
+          <div style="font-size: 16px; line-height: 1.5; opacity: .92; margin-top: 10px; font-style: italic">Chưa đến 1.400 VNĐ mỗi ngày</div>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(210px,100%),1fr));gap:12px">
+          <div style="border-radius:20px;padding:18px 20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35)">
+            <div style="font-size:14px;line-height:1.4;opacity:.9">Cứu kéo trong 100 km</div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:26px;letter-spacing:-.01em;line-height:1.2;margin-top:6px;white-space:nowrap">Miễn phí</div>
+          </div>
+          <div style="border-radius:20px;padding:18px 20px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.35)">
+            <div style="font-size:14px;line-height:1.4;opacity:.9">Phần vượt quá 100 km</div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:26px;letter-spacing:-.01em;line-height:1.2;margin-top:6px;white-space:nowrap">25.000 VNĐ/km</div>
+          </div>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:4px">
+          
+          
+        </div>
+      </div>
+      <div style="position:relative;min-height:340px;min-width:0"><img src="/_blob/9d5589425c7d56123ca2fc6ff769ff37" alt="Xe cứu kéo sàn trượt Phát Tiến chở ô tô" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:80% 50%;display:block"></div>
+    </div>
+  </div>
+
+  <!-- ƯỚC TÍNH CHI PHÍ -->
+  <div id="cong-cu" style="max-width:1240px;margin:0 auto;padding:88px 24px;box-sizing:border-box">
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;text-align:center;gap:12px 32px;margin-bottom:32px">
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#E3121B;text-transform:uppercase;letter-spacing:.06em">Ước tính theo quãng đường</div>
+        <h2 style="--fk: 0.0529; --fg: 48px; --fc: 30px; font-family: 'Inter Tight',sans-serif; font-weight: 700; font-size: 34px; letter-spacing: -.02em; margin: 8px 0 0">Bạn sẽ trả bao nhiêu cho chuyến cứu kéo nếu không có gói cứu hộ?</h2>
+      </div>
+      
+    </div>
+    <dc-import name="PTKmCalc" hint-size="100%,760px"></dc-import>
+  </div>
+
+  <!-- QUY TRÌNH -->
+  <div id="quy-trinh" style="background:#F6F6F6">
+    <div style="max-width:1240px;margin:0 auto;padding:80px 24px;box-sizing:border-box">
+      <h2 style="--fk:0.0867;--fg:48px;--fc:32px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(32px,4vw,48px);letter-spacing:-.02em;text-align:center;margin:0 0 40px">Chỉ <span style="color:#E3121B">3 bước</span> khi cần cứu hộ</h2>
+      <div class="pt-steps3" onScroll="{{onStepStrip}}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px">
+        <sc-for list="{{steps}}" as="s" hint-placeholder-count="3">
+          <div style="background:#fff;border-radius:28px;padding:32px;box-shadow:0 10px 30px rgba(0,0,0,.05)">
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:64px;line-height:1;background:linear-gradient(90deg,#9E0012,#F2222B);-webkit-background-clip:text;background-clip:text;color:transparent">{{s.n}}</div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:600;font-size:22px;margin:14px 0 6px">{{s.title}}</div>
+            <div style="font-size:15px;color:#555;line-height:1.55">{{s.desc}}</div>
+          </div>
+        </sc-for>
+      </div>
+      <div class="pt-sbar" aria-hidden="true"><span></span></div>
+    </div>
+  </div>
+
+  <!-- HÌNH ẢNH CỨU HỘ -->
+  <div id="hinh-anh" style="max-width:1240px;margin:0 auto;padding:88px 24px 0;box-sizing:border-box">
+    <div style="display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 32px;margin-bottom:32px">
+      <div>
+        <div style="font-size:14px;font-weight:600;color:#E3121B;text-transform:uppercase;letter-spacing:.06em">Hình ảnh dịch vụ</div>
+        <h2 style="--fk:0.0938;--fg:59px;--fc:32px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(32px,4vw,48px);letter-spacing:-.02em;margin:8px 0 0">Hình ảnh&nbsp;<span style="color: rgb(227, 18, 27)">cứu hộ</span> thực tế</h2>
+      </div>
+    </div>
+    <div class="pt-gallery" onScroll="{{onStepStrip}}" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px">
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/dca712b9cff4c704a8c85204388226d4" alt="Đưa xe lên sàn cứu hộ trời mưa" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/f7181998845a6448ea58c577320f4371" alt="Kiểm tra và câu bình cho xe ban đêm" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/51baceaf418b55487ed039db8311a127" alt="Thay lốp xe ngay bên đường" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/658a48d06c7885c3bba177a2e51d74ac" alt="Kéo xe hư hỏng sau va chạm lên sàn trượt" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/121705c7c0634feb2c6cdf0b3d7b8a8f" alt="Xe cứu hộ Phát Tiến chở xe về đại lý" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/cee4db4624420964de68310db17fcbe3" alt="Tiếp nhận xe va chạm tại hiện trường" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/e1e0c74642e72bd5b41422b0372bf247" alt="Thay lốp cho xe SUV bên đường" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/b20a434669f463666f2a5849b1756002" alt="Hỗ trợ thay lốp ban đêm có biển cảnh báo" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+      <div style="position:relative;aspect-ratio:4/3;border-radius:24px;overflow:hidden;background:#F4F4F4"><img src="/_blob/32afcaa3f5fe16b908260f96c014d55f" alt="Kỹ thuật viên tư vấn cho khách bên xe gặp sự cố" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+    </div>
+    <div class="pt-sbar" aria-hidden="true" style="--w:13%"><span></span></div>
+  </div>
+
+  <!-- HỆ THỐNG ĐẠI LÝ -->
+  <div id="dai-ly" style="padding:88px 0 0">
+    <h2 style="--fk:0.0765;--fg:48px;--fc:32px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(32px,4vw,48px);letter-spacing:-.02em;text-align:center;margin:0 0 12px;padding:0 24px">Hệ thống <span style="color: rgb(227, 18, 27)">đại lý Ôtô Phát Tiến</span></h2>
+    <div class="pt-dl-row">
+      <div class="pt-dl-in">
+        <div class="pt-dl-info">
+          <img class="pt-dl-logo" src="/_blob/1ce59474ec50ae931e647e26eebe627f" alt="Logo Honda Ôtô">
+          <h3>Honda Ôtô</h3>
+          <p>Showroom đạt chuẩn 5S của Honda Việt Nam</p>
+          <div class="pt-dl-acts">
+            <span class="pt-dl-count">4 điểm phục vụ</span>
+            <a class="pt-dl-cta" href="#dang-ky-goi">Liên hệ tư vấn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          </div>
+        </div>
+        <div class="pt-dl-gal">
+          <div class="pt-dl-strip" onScroll="{{onDlScroll}}">
+            <div class="pt-dl-card0"><span class="pt-dl-logobox"><img class="pt-dl-logo" src="/_blob/1ce59474ec50ae931e647e26eebe627f" alt="Logo Honda Ôtô"></span>
+          <h3>Honda Ôtô</h3>
+          <p>Showroom đạt chuẩn 5S của Honda Việt Nam</p>
+          <div class="pt-dl-acts">
+            <span class="pt-dl-count">4 điểm phục vụ</span>
+            <a class="pt-dl-cta" href="#dang-ky-goi">Liên hệ tư vấn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          </div>
+        </div>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Honda Ôtô Sài Gòn Quận 2, 136D Mai Chí Thọ, TP.HCM" target="_blank" rel="noopener" aria-label="Honda Ôtô Sài Gòn – Quận 2, 136D Mai Chí Thọ, P. Bình Trưng, TP.HCM. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/0bcee7e70bd04d18adfd2c54e639d1d7" alt="Showroom Honda Ôtô Sài Gòn – Quận 2"></span>
+              <span class="pt-dl-name">Honda Ôtô Sài Gòn – Quận 2</span>
+              <span class="pt-dl-addr">136D Mai Chí Thọ, P. Bình Trưng, TP.HCM</span>
+            </a>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Honda Ôtô Đồng Nai Biên Hoà, Khu thương mại Amata, Long Bình" target="_blank" rel="noopener" aria-label="Honda Ôtô Đồng Nai – Biên Hoà, B04 KP3, Khu thương mại Amata, P. Long Bình, Đồng Nai. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/56542219e6b4cdd854232017265e3931" alt="Showroom Honda Ôtô Đồng Nai – Biên Hoà"></span>
+              <span class="pt-dl-name">Honda Ôtô Đồng Nai – Biên Hoà</span>
+              <span class="pt-dl-addr">B04 KP3, Khu thương mại Amata, P. Long Bình, Đồng Nai</span>
+            </a>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Honda Ôtô Long An Tân An, 86 Quốc lộ 1" target="_blank" rel="noopener" aria-label="Honda Ôtô Long An – Tân An, 86 Quốc lộ 1 (tuyến tránh), P. Long An, Tây Ninh. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/65d23329b658706995584b0799277ceb" alt="Showroom Honda Ôtô Long An – Tân An"></span>
+              <span class="pt-dl-name">Honda Ôtô Long An – Tân An</span>
+              <span class="pt-dl-addr">86 Quốc lộ 1 (tuyến tránh), P. Long An, Tây Ninh</span>
+            </a>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Honda Ôtô Tây Ninh Hoà Thành" target="_blank" rel="noopener" aria-label="Honda Ôtô Tây Ninh – Hoà Thành, KP Hiệp Hoà, P. Thanh Điền, Tây Ninh. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/d187d6fb75f04186650fde6665aec961" alt="Showroom Honda Ôtô Tây Ninh – Hoà Thành"></span>
+              <span class="pt-dl-name">Honda Ôtô Tây Ninh – Hoà Thành</span>
+              <span class="pt-dl-addr">KP Hiệp Hoà, P. Thanh Điền, Tây Ninh</span>
+            </a>
+          </div>
+          <div class="pt-dl-nav">
+            <button type="button" class="pt-dl-arrow" aria-label="Đại lý trước" onClick="{{dlPrev}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <div class="pt-dl-track" aria-hidden="true"><span></span></div>
+            <button type="button" class="pt-dl-arrow" aria-label="Đại lý kế tiếp" onClick="{{dlNext}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-dl-row" style="background:#F7F8FA">
+      <div class="pt-dl-in">
+        <div class="pt-dl-info">
+          <img class="pt-dl-logo" src="/_blob/0be830259e5f38d972907582a5a66233" alt="Logo Toyota">
+          <h3>Toyota</h3>
+          <p>Đại lý uỷ quyền chính hãng Toyota Việt Nam</p>
+          <div class="pt-dl-acts">
+            <span class="pt-dl-count">5 điểm phục vụ</span>
+            <a class="pt-dl-cta" href="#dang-ky-goi">Liên hệ tư vấn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          </div>
+        </div>
+        <div class="pt-dl-gal">
+          <div class="pt-dl-strip" onScroll="{{onDlScroll}}">
+            <div class="pt-dl-card0"><span class="pt-dl-logobox"><img class="pt-dl-logo" src="/_blob/0be830259e5f38d972907582a5a66233" alt="Logo Toyota"></span>
+          <h3>Toyota</h3>
+          <p>Đại lý uỷ quyền chính hãng Toyota Việt Nam</p>
+          <div class="pt-dl-acts">
+            <span class="pt-dl-count">5 điểm phục vụ</span>
+            <a class="pt-dl-cta" href="#dang-ky-goi">Liên hệ tư vấn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          </div>
+        </div>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Toyota Ninh Kiều, Cách Mạng Tháng Tám, Cần Thơ" target="_blank" rel="noopener" aria-label="Toyota Ninh Kiều, 57 (59A) Cách Mạng Tháng Tám, P. Cái Khế, TP. Cần Thơ. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/c9e188d97418e956636c5e6d04832e67" alt="Showroom Toyota Ninh Kiều"></span>
+              <span class="pt-dl-name">Toyota Ninh Kiều</span>
+              <span class="pt-dl-addr">57 (59A) Cách Mạng Tháng Tám, P. Cái Khế, TP. Cần Thơ</span>
+            </a>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Toyota Tiền Giang, Châu Thành" target="_blank" rel="noopener" aria-label="Toyota Tiền Giang, Ấp Long Tường, X. Châu Thành, Đồng Tháp. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/847a24dcc592d69fedee5f5d46364ab8" alt="Showroom Toyota Tiền Giang"></span>
+              <span class="pt-dl-name">Toyota Tiền Giang</span>
+              <span class="pt-dl-addr">Ấp Long Tường, X. Châu Thành, Đồng Tháp</span>
+            </a>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Toyota Bến Tre, Phước Thạnh, Sơn Đông" target="_blank" rel="noopener" aria-label="Toyota Bến Tre, 186A, KP Phước Thạnh, P. Sơn Đông, Vĩnh Long. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/1d2639dcdd3d09320fc8e567d653bebb" alt="Showroom Toyota Bến Tre"></span>
+              <span class="pt-dl-name">Toyota Bến Tre</span>
+              <span class="pt-dl-addr">186A, KP Phước Thạnh, P. Sơn Đông, Vĩnh Long</span>
+            </a>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Toyota An Sương, 382 Lê Quang Đạo, TP.HCM" target="_blank" rel="noopener" aria-label="Toyota An Sương, 382 Lê Quang Đạo, P. Trung Mỹ Tây, TP.HCM. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/b0b6325ab9571485aca3394a72840093" alt="Showroom Toyota An Sương"></span>
+              <span class="pt-dl-name">Toyota An Sương</span>
+              <span class="pt-dl-addr">382 Lê Quang Đạo, P. Trung Mỹ Tây, TP.HCM</span>
+            </a>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Toyota An Sương, 113 Trường Chinh, TP.HCM" target="_blank" rel="noopener" aria-label="Toyota An Sương – CN Trường Chinh, 113 Trường Chinh, P. Đông Hưng Thuận, TP.HCM. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/f65905f514732a74eb1c9f3f932ad512" alt="Showroom Toyota An Sương – CN Trường Chinh"></span>
+              <span class="pt-dl-name">Toyota An Sương – CN Trường Chinh</span>
+              <span class="pt-dl-addr">113 Trường Chinh, P. Đông Hưng Thuận, TP.HCM</span>
+            </a>
+          </div>
+          <div class="pt-dl-nav">
+            <button type="button" class="pt-dl-arrow" aria-label="Đại lý trước" onClick="{{dlPrev}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <div class="pt-dl-track" aria-hidden="true"><span></span></div>
+            <button type="button" class="pt-dl-arrow" aria-label="Đại lý kế tiếp" onClick="{{dlNext}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pt-dl-row">
+      <div class="pt-dl-in">
+        <div class="pt-dl-info">
+          <img class="pt-dl-logo" src="/_blob/7d649d7424c8fe4e306ea932815d2f85" alt="Logo Mitsubishi Motors">
+          <h3>Mitsubishi Motors</h3>
+          <p>Showroom đạt chuẩn 3S toàn cầu</p>
+          <div class="pt-dl-acts">
+            <span class="pt-dl-count">1 điểm phục vụ</span>
+            <a class="pt-dl-cta" href="#dang-ky-goi">Liên hệ tư vấn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          </div>
+        </div>
+        <div class="pt-dl-gal">
+          <div class="pt-dl-strip" onScroll="{{onDlScroll}}">
+            <div class="pt-dl-card0"><span class="pt-dl-logobox"><img class="pt-dl-logo" src="/_blob/7d649d7424c8fe4e306ea932815d2f85" alt="Logo Mitsubishi Motors"></span>
+          <h3>Mitsubishi Motors</h3>
+          <p>Showroom đạt chuẩn 3S toàn cầu</p>
+          <div class="pt-dl-acts">
+            <span class="pt-dl-count">1 điểm phục vụ</span>
+            <a class="pt-dl-cta" href="#dang-ky-goi">Liên hệ tư vấn<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+          </div>
+        </div>
+            <a class="pt-dl-card" href="https://www.google.com/maps/search/?api=1&amp;query=Mitsubishi Vĩnh Long, Tân Hạnh" target="_blank" rel="noopener" aria-label="Mitsubishi Vĩnh Long, Tổ 10, Ấp Tân Hưng, X. Tân Hạnh, Vĩnh Long. Mở chỉ đường">
+              <span class="pt-dl-photo"><img src="/_blob/5aa1c699a0e2d273bbb77cad3f3e9c41" alt="Showroom Mitsubishi Vĩnh Long"></span>
+              <span class="pt-dl-name">Mitsubishi Vĩnh Long</span>
+              <span class="pt-dl-addr">Tổ 10, Ấp Tân Hưng, X. Tân Hạnh, Vĩnh Long</span>
+            </a>
+          </div>
+          <div class="pt-dl-nav">
+            <button type="button" class="pt-dl-arrow" aria-label="Đại lý trước" onClick="{{dlPrev}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg></button>
+            <div class="pt-dl-track" aria-hidden="true"><span></span></div>
+            <button type="button" class="pt-dl-arrow" aria-label="Đại lý kế tiếp" onClick="{{dlNext}}"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- NHẬN TƯ VẤN GÓI CỨU HỘ -->
+  <div id="dang-ky-goi" style="max-width:1240px;margin:0 auto;padding:88px 24px 0;box-sizing:border-box">
+    <h2 style="--fk:0.0751;--fg:48px;--fc:32px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(32px,4vw,48px);letter-spacing:-.02em;text-align:center;margin:0 0 36px">Nhận Tư Vấn&nbsp;<span style="color: rgb(227, 18, 27)">Gói Cứu hộ 24/7</span></h2>
+    
+    <div class="pt-reg" style="display:flex;flex-wrap:wrap;justify-content:center;gap:24px;align-items:stretch;max-width:820px;margin:0 auto">
+
+      
+
+      <div class="pt-reg-form" style="flex:1.4 1 460px;min-width:0;box-sizing:border-box;border-radius:28px;padding:clamp(24px,3vw,40px);background:#fff;border:1.5px solid #F7B4B7;box-shadow:0 16px 50px rgba(227,18,27,.1);display:flex;flex-direction:column;justify-content:center">
+        <sc-if value="{{formOpen}}" hint-placeholder-val="{{ true }}">
+          <form class="pt-reg-f" style="display: grid; grid-template-columns: repeat(auto-fit,minmax(min(240px,100%),1fr)); gap: 18px">
+            <label for="dk-name" style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600"><span>Họ và tên <span style="color:#C40016" aria-hidden="true">*</span></span>
+              <input id="dk-name" type="text" autocomplete="name" placeholder="Nguyễn Văn A" style="height:52px;box-sizing:border-box;border:1.5px solid #E0E0E0;border-radius:100px;padding:0 20px;font-size:16px;font-family:inherit">
+            </label>
+            <label for="dk-phone" style="display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600"><span>Số điện thoại <span style="color:#C40016" aria-hidden="true">*</span></span>
+              <input id="dk-phone" type="tel" autocomplete="tel" placeholder="09xx xxx xxx" style="height:52px;box-sizing:border-box;border:1.5px solid #E0E0E0;border-radius:100px;padding:0 20px;font-size:16px;font-family:inherit">
+            </label>
+            <label for="dk-car" style="grid-column:1 / -1;display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600"><span>Loại xe</span>
+              <input id="dk-car" type="text" placeholder="VD: Honda CR-V, Toyota Vios, Mitsubishi Xpander…" style="height:52px;box-sizing:border-box;border:1.5px solid #E0E0E0;border-radius:100px;padding:0 20px;font-size:16px;font-family:inherit">
+            </label>
+            
+            <label for="dk-note" style="grid-column:1 / -1;display:flex;flex-direction:column;gap:8px;font-size:14px;font-weight:600">Ghi chú              <textarea id="dk-note" rows="5" placeholder="Thời gian thuận tiện để liên hệ, nhu cầu cần tư vấn…" style="box-sizing:border-box;border:1.5px solid #E0E0E0;border-radius:22px;padding:14px 20px;font-size:16px;font-family:inherit;resize:vertical"></textarea>
+            </label>
+            <sc-if value="{{formError}}" hint-placeholder-val="{{ false }}">
+              <div role="alert" style="grid-column:1 / -1;background:#FFF1F2;border:1.5px solid #F7B4B7;color:#9E0012;border-radius:16px;padding:12px 16px;font-size:14px;font-weight:600">{{formError}}</div>
+            </sc-if>
+            
+            <div aria-hidden="true" style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden"><label for="dk-web">Website</label><input id="dk-web" type="text" tabindex="-1" autocomplete="off"></div>
+            <button type="button" onClick="{{ submitForm }}" style="grid-column:1 / -1;height:60px;border:0;border-radius:100px;background:linear-gradient(90deg,#F2222B,#9E0012);color:#fff;font-family:'Inter Tight',sans-serif;font-weight:600;font-size:18px;cursor:pointer;box-shadow:0 12px 30px rgba(227,18,27,.35)">{{submitLabel}}</button>
+            
+          </form>
+        </sc-if>
+        <sc-if value="{{formSent}}" hint-placeholder-val="{{ false }}">
+          <div style="min-height:420px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px">
+            <div style="width:72px;height:72px;border-radius:50%;background:linear-gradient(135deg,#F2222B,#9E0012);display:flex;align-items:center;justify-content:center">
+              <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12l5 5L20 7"></path></svg>
+            </div>
+            <div style="font-family:'Inter Tight',sans-serif;font-weight:700;font-size:30px">Cảm ơn bạn đã đăng ký!</div>
+            <div style="font-size:16px;line-height:1.6;color:#555;max-width:420px">Phát Tiến đã nhận thông tin của {{sentName}}. Bộ phận Chăm sóc khách hàng sẽ gọi tới số <b style="color:#000">{{sentPhone}}</b> để tư vấn và kích hoạt Gói Cứu hộ 24/7 cho bạn.</div>
+            <button type="button" onClick="{{ resetForm }}" style="margin-top:8px;min-height:48px;padding:0 24px;border:1.5px solid #E3121B;border-radius:100px;background:#fff;color:#E3121B;font-family:inherit;font-weight:600;font-size:15px;cursor:pointer">Đăng ký cho xe khác</button>
+          </div>
+        </sc-if>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <div style="max-width:1240px;margin:0 auto;padding:80px 24px;box-sizing:border-box">
+    <div style="border-radius:32px;background:linear-gradient(120deg,#E3121B 0%,#9E0012 60%,#1A1A1A 100%);color:#fff;padding:clamp(32px,5vw,64px);text-align:center;box-shadow:0 20px 50px rgba(227,18,27,.25)">
+      <h2 style="--fk:0.0985;--fg:112px;--fc:32px;font-family:'Inter Tight',sans-serif;font-weight:700;font-size:clamp(32px,4.5vw,56px);letter-spacing:-.02em;margin:0 0 12px">Gặp sự cố trên đường?</h2>
+      <p style="font-size:18px;line-height:1.6;opacity:.9;margin:0 auto 28px;max-width:620px">Phát Tiến Holding hỗ trợ 24/7</p>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:12px"><a href="tel:0901117111" style="background:#fff;color:#C40016;font-weight:700;font-size:18px;padding:18px 34px;border-radius:100px">Gọi 0901.117.111</a></div>
+    </div>
+  </div><div class="pt-footer" style="background: radial-gradient(900px 420px at 0% 0%,rgba(227,18,27,.22),rgba(227,18,27,0) 70%),#0B0B0F; color: #C9C9CF; height: 249px">
+    <div style="max-width:1240px;margin:0 auto;padding:72px 24px 0;box-sizing:border-box">
+      <div style="display:flex;flex-wrap:wrap;gap:48px 40px;align-items:flex-start">
+
+        <div style="flex:1.5 1 300px;min-width:0;display:flex;flex-direction:column;gap:20px">
+          <a href="#" style="align-self:flex-start;display:block;background:#fff;border-radius:16px;padding:12px 16px;box-shadow:0 0 0 3px rgba(255,255,255,.08)">
+            <img src="/_blob/bf5907d523e9dea2cf472378794d8eaf" alt="Phát Tiến Holding · Ôtô – Môtô – Xe Máy" style="display:block;height:64px;width:auto">
+          </a>
+          
+          <a href="tel:0901117111" style="align-self:flex-start;display:flex;align-items:center;gap:10px;background:linear-gradient(90deg,#F2222B,#9E0012);color:#fff;font-weight:600;font-size:15px;padding:12px 20px;border-radius:100px">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg>
+            Cứu hộ 24/7 · 0901.117.111
+          </a>
+        </div>
+
+        <div style="flex:1 1 180px;min-width:0">
+          <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#fff">Khám phá</div>
+          <div style="display:flex;gap:4px;margin:12px 0 22px"><span style="width:22px;height:3px;border-radius:2px;background:#E3121B"></span><span style="width:12px;height:3px;border-radius:2px;background:#F7B4B7"></span></div>
+          <div style="display:flex;flex-direction:column;gap:14px;font-size:15px"><a href="#pham-vi">Phạm vi hỗ trợ</a>
+            <a href="#bang-gia">Bảng giá</a>
+            <a href="#cong-cu">Ước tính chi phí</a>
+            <a href="#hinh-anh">Hình ảnh dịch vụ</a>
+            <a href="#dai-ly" class="pt-dl-link">Hệ thống đại lý</a>
+          </div>
+        </div>
+
+        
+
+        <div style="flex:1.3 1 260px;min-width:0">
+          <div style="font-family:'Inter Tight',sans-serif;font-weight:800;font-size:15px;letter-spacing:.14em;text-transform:uppercase;color:#fff">Liên hệ</div>
+          <div style="display:flex;gap:4px;margin:12px 0 22px"><span style="width:22px;height:3px;border-radius:2px;background:#E3121B"></span><span style="width:12px;height:3px;border-radius:2px;background:#F7B4B7"></span></div>
+          <div style="display:flex;flex-direction:column;gap:16px;font-size:15px;line-height:1.6">
+            <div style="display:flex;gap:12px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E3121B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M12 21s-7-6.5-7-12a7 7 0 0 1 14 0c0 5.5-7 12-7 12z"></path><circle cx="12" cy="9" r="2.5"></circle></svg><span>Trụ sở chính: 136D Mai Chí Thọ, P. Bình Trưng, TP. Hồ Chí Minh</span></div>
+            <a href="tel:0901117111" style="display:flex;gap:12px;align-items:flex-start"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#E3121B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:3px"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"></path></svg><span>Hotline cứu hộ 24/7: 0901.117.111</span></a>
+            
+          </div>
+        </div>
+
+      </div>
+      <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px 24px;margin-top:56px;padding:24px 0 28px;border-top:1px solid rgba(255,255,255,.1);font-size:13px;color:#8E8E96"><span>© 2026 Phát Tiến Holding. Bảo lưu mọi quyền.</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"videoUrl":{"editor":"text","default":"https://youtu.be/LRhtevTEXs0"},"$preview":{"width":1440,"height":7000}}'>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.state = { sent: null, error: '', sending: false };
+  }
+
+  dlSync(el) {
+    const gal = el.closest('.pt-dl-gal'), track = gal && gal.querySelector('.pt-dl-track');
+    if (!track) return;
+    const ratio = el.clientWidth / el.scrollWidth, max = el.scrollWidth - el.clientWidth;
+    track.style.setProperty('--w', Math.min(100, ratio * 100) + '%');
+    track.style.setProperty('--x', (max > 0 ? (el.scrollLeft / max) * (1 / ratio - 1) * 100 : 0) + '%');
+    gal.classList.toggle('pt-dl-fit', max <= 1);
+    const arrows = gal.querySelectorAll('.pt-dl-arrow');
+    arrows[0].disabled = el.scrollLeft <= 1;
+    arrows[1].disabled = el.scrollLeft >= max - 1;
+  }
+
+  dlMove(e, dir) {
+    const el = e.currentTarget.closest('.pt-dl-gal').querySelector('.pt-dl-strip');
+    const step = el.querySelector('.pt-dl-card').offsetWidth + 18;
+    el.scrollBy({ left: dir * step, behavior: 'smooth' });
+  }
+
+  stripDrag() {
+    // Cảm ứng đã tự lướt được; đoạn này cho phép kéo bằng chuột.
+    let drag = null, moved = false;
+    this.dragDown = (e) => {
+      if (e.pointerType !== 'mouse' || e.button !== 0 || !e.target.closest) return;
+      const el = e.target.closest('.pt-steps3,.pt-gallery,.pt-dl-strip');
+      if (!el || el.scrollWidth <= el.clientWidth) return;
+      drag = { el, x: e.clientX, left: el.scrollLeft };
+      moved = false;
+    };
+    this.dragMove = (e) => {
+      if (!drag) return;
+      const dx = e.clientX - drag.x;
+      if (!moved && Math.abs(dx) > 5) {
+        moved = true;
+        drag.el.style.scrollSnapType = 'none';
+        drag.el.style.scrollBehavior = 'auto';
+      }
+      if (moved) drag.el.scrollLeft = drag.left - dx;
+    };
+    this.dragUp = () => {
+      if (!drag) return;
+      const { el, left } = drag;
+      drag = null;
+      if (!moved) return;
+      const kids = [...el.children].filter((c) => c.offsetWidth > 0);
+      const stops = kids.map((c) => c.offsetLeft - kids[0].offsetLeft);
+      const forward = el.scrollLeft > left;
+      const target = forward
+        ? stops.find((v) => v > left + 1) ?? stops[stops.length - 1]
+        : [...stops].reverse().find((v) => v < left - 1) ?? 0;
+      el.style.scrollBehavior = '';
+      el.scrollTo({ left: target, behavior: 'smooth' });
+      setTimeout(() => { el.style.scrollSnapType = ''; }, 450);
+    };
+    // Vừa kéo xong thì không tính là bấm vào thẻ đại lý.
+    this.dragClick = (e) => {
+      if (moved) { e.preventDefault(); e.stopPropagation(); moved = false; }
+    };
+    this.dragStart = (e) => {
+      if (e.target.closest && e.target.closest('.pt-steps3,.pt-gallery,.pt-dl-strip')) e.preventDefault();
+    };
+    document.addEventListener('pointerdown', this.dragDown);
+    window.addEventListener('pointermove', this.dragMove);
+    window.addEventListener('pointerup', this.dragUp);
+    document.addEventListener('click', this.dragClick, true);
+    document.addEventListener('dragstart', this.dragStart);
+  }
+
+  componentDidMount() {
+    this.stripDrag();
+    this.dlSyncAll = () => document.querySelectorAll('.pt-dl-strip').forEach((el) => this.dlSync(el));
+    this.dlSyncAll();
+    window.addEventListener('resize', this.dlSyncAll);
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    // 1 giây dừng cộng khoảng 0,5 giây lướt.
+    const STEP_MS = 1500, HOLD_AFTER_TOUCH_MS = 4000;
+    let holdUntil = 0;
+    this.stepHold = (e) => {
+      if (e.target.closest && e.target.closest('.pt-steps3')) holdUntil = Date.now() + HOLD_AFTER_TOUCH_MS;
+    };
+    document.addEventListener('pointerdown', this.stepHold, { passive: true });
+    this.stepTimer = setInterval(() => {
+      const el = document.querySelector('.pt-steps3');
+      if (!el || document.hidden || !window.matchMedia('(max-width:760px)').matches) return;
+      const box = el.getBoundingClientRect();
+      if (box.bottom <= 0 || box.top >= window.innerHeight) {
+        // Ngoài màn hình: về ô 1 để lần sau kéo tới luôn bắt đầu từ đầu.
+        el.scrollLeft = 0;
+        return;
+      }
+      if (Date.now() < holdUntil) return;
+      const cards = el.children;
+      if (cards.length < 2) return;
+      const span = cards[1].offsetLeft - cards[0].offsetLeft;
+      const now = Math.round(el.scrollLeft / span);
+      el.scrollTo({ left: ((now + 1) % cards.length) * span, behavior: 'smooth' });
+    }, STEP_MS);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener('pointerdown', this.dragDown);
+    window.removeEventListener('pointermove', this.dragMove);
+    window.removeEventListener('pointerup', this.dragUp);
+    document.removeEventListener('click', this.dragClick, true);
+    document.removeEventListener('dragstart', this.dragStart);
+    window.removeEventListener('resize', this.dlSyncAll);
+    clearInterval(this.stepTimer);
+    document.removeEventListener('pointerdown', this.stepHold);
+  }
+
+  async submitForm() {
+    // Link Ứng dụng web của Apps Script (tools/google-sheet-form.gs).
+    const SHEET_URL = 'https://script.google.com/macros/s/AKfycbyRD8mPIvTyeWg_aTfFm49E4gn9tl9z_VDJsu2kzbJewWP7CZHwDIcXYHdz6MvGFdAr/exec';
+    if (this.state.sending) return;
+    const val = (id) => {
+      const el = document.getElementById(id);
+      return el ? el.value.trim() : '';
+    };
+    const name = val('dk-name');
+    const phone = val('dk-phone');
+    if (!name || !phone) {
+      this.setState({ error: 'Vui lòng nhập họ tên và số điện thoại.' });
+      return;
+    }
+    if (!/^0\d{9,10}$/.test(phone.replace(/[\s.\-]/g, ''))) {
+      this.setState({ error: 'Số điện thoại chưa đúng, vui lòng kiểm tra lại.' });
+      return;
+    }
+    this.setState({ sending: true, error: '' });
+    try {
+      if (!SHEET_URL) throw new Error('Chưa có link Google Sheet');
+      const stop = new AbortController();
+      const timer = setTimeout(() => stop.abort(), 15000);
+      const res = await fetch(SHEET_URL, {
+        method: 'POST',
+        body: new URLSearchParams({ name, phone, car: val('dk-car'), note: val('dk-note'), website: val('dk-web'), source: 'Landing Cứu hộ 24/7' }),
+        signal: stop.signal
+      });
+      clearTimeout(timer);
+      const data = await res.json();
+      if (!data.ok) throw new Error(data.error || 'Sheet từ chối');
+      this.setState({ sent: { name, phone }, error: '', sending: false });
+    } catch (err) {
+      this.setState({ sending: false, error: 'Chưa gửi được thông tin. Vui lòng thử lại hoặc gọi Hotline 0901.117.111.' });
+    }
+  }
+
+  renderVals() {
+    const { sent, error } = this.state;
+    const rawVideo = String(this.props.videoUrl || 'https://youtu.be/LRhtevTEXs0').trim();
+    const vm = rawVideo.match(/(?:youtu\.be\/|[?&]v=|embed\/|shorts\/|live\/)([A-Za-z0-9_-]{11})/);
+    const videoId = vm ? vm[1] : '';
+    return {
+      onDlScroll: (e) => this.dlSync(e.currentTarget),
+      dlPrev: (e) => this.dlMove(e, -1),
+      dlNext: (e) => this.dlMove(e, 1),
+      videoWatch: videoId ? 'https://youtu.be/' + videoId : '',
+      onStepStrip: (e) => {
+        const el = e.currentTarget, bar = el && el.nextElementSibling;
+        if (!bar) return;
+        const ratio = el.clientWidth / el.scrollWidth, max = el.scrollWidth - el.clientWidth;
+        bar.style.setProperty('--w', Math.min(100, ratio * 100) + '%');
+        bar.style.setProperty('--x', (max > 0 ? (el.scrollLeft / max) * (1 / ratio - 1) * 100 : 0) + '%');
+      },
+      clipPlaying: !!(this.state && this.state.clip) && !!videoId,
+      clipIdle: !((this.state && this.state.clip) && videoId),
+      videoAutoplay: videoId ? 'https://www.youtube.com/embed/' + videoId + '?rel=0&autoplay=1&playsinline=1' : '',
+      clipMeta: this.state && this.state.clip && !videoId ? 'Clip đang được cập nhật' : 'Xem clip',
+      openClip: () => this.setState({ clip: true }),
+      perks: [
+        'Một đầu mối hỗ trợ 24/7 qua Hotline 0901.117.111',
+        'Cố vấn Dịch vụ hướng dẫn xử lý ban đầu và thủ tục liên hệ bảo hiểm',
+        'Xe được đưa về Đại lý chính hãng hoặc điểm dịch vụ phù hợp'
+      ],
+      menuOpen: !!(this.state && this.state.menu),
+      openMenu: () => this.setState({ menu: true }),
+      closeMenu: () => this.setState({ menu: false }),
+      videoEmbed: videoId ? 'https://www.youtube.com/embed/' + videoId + '?rel=0' : '',
+      hasVideo: !!videoId,
+      noVideo: !videoId,
+      packageBenefits: [
+        'Cứu kéo miễn phí trong bán kính 100 km',
+        'Một đầu mối hỗ trợ 24/7, bất kể ngày hay đêm',
+        'Cố vấn Dịch vụ tư vấn xử lý ban đầu và thủ tục bảo hiểm',
+        'Không phải tự tìm đơn vị cứu hộ lúc khẩn cấp'
+      ],
+      formOpen: !sent,
+      formSent: !!sent,
+      formError: error,
+      sentName: sent ? sent.name : '',
+      sentPhone: sent ? sent.phone : '',
+      submitForm: () => this.submitForm(),
+      submitLabel: this.state.sending ? 'Đang gửi…' : 'Đăng ký gói 500.000 VNĐ/năm',
+      resetForm: () => this.setState({ sent: null, error: '' }),
+      packagePerks: [
+        'Một đầu mối hỗ trợ 24/7 qua Hotline 0901.117.111',
+        'Cứu kéo miễn phí trong bán kính 100 km (vượt 100 km: 25.000 VNĐ/km)',
+        'Cố vấn Dịch vụ hướng dẫn xử lý ban đầu và thủ tục liên hệ bảo hiểm',
+        'Xe được đưa về Đại lý chính hãng hoặc điểm dịch vụ phù hợp'
+      ],
+      dealerNames: ['Honda Ôtô Sài Gòn – Quận 2', 'Honda Ôtô Đồng Nai – Biên Hoà', 'Honda Ôtô Long An – Tân An', 'Honda Ôtô Tây Ninh – Hoà Thành', 'Toyota Ninh Kiều', 'Toyota Tiền Giang', 'Toyota Bến Tre', 'Toyota An Sương', 'Toyota An Sương – CN Trường Chinh', 'Mitsubishi Vĩnh Long'],
+      heroStats: [
+        { big: '24/7', unit: '', desc: 'Hỗ trợ bất kể ngày hay đêm khi xe gặp sự cố' },
+        { big: '100', unit: ' km', desc: 'Cứu kéo miễn phí ' },
+        { big: '10', unit: ' đại lý', desc: 'Đại lý ôtô chính hãng' },
+        { big: '500K', unit: '/năm', desc: 'Phí tham gia Gói Cứu hộ 24/7' }
+      ],
+      scopeOnsite: ['Hết ắc quy', 'Hết nhiên liệu', 'Sự cố lốp', 'Xe báo lỗi', 'Xe không thể tiếp tục di chuyển'],
+      scopeTow: ['Xe chết máy', 'Tai nạn', 'Mất chìa khóa', 'Sự cố phanh – lái', 'Thủy kích / ngập nước', 'Sự cố liên quan đến nhiên liệu'],
+      prices: [
+        { range: '≤ 10 km', value: '600.000', unit: 'VNĐ/chuyến', desc: 'Đơn giá trọn chuyến trong phạm vi 10 km.' },
+        { range: '> 10 km', value: '+25.000', unit: 'VNĐ × mỗi km vượt', desc: '600.000 VNĐ/chuyến cộng 25.000 VNĐ cho mỗi km vượt quá 10 km.' }
+      ],
+      steps: [
+        { n: '01', title: 'Gọi Hotline', desc: 'Gọi ngay 0901.117.111, tổng đài trực 24/7.' },
+        { n: '02', title: 'CVDV tiếp nhận và tư vấn', desc: 'Khách hàng cung cấp vị trí và tình trạng xe.' },
+        { n: '03', title: 'Ứng cứu hoặc cứu kéo', desc: 'Điều phối cứu hộ, đưa xe về Đại lý hoặc điểm dịch vụ phù hợp và cập nhật cho bạn đến khi hoàn tất.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
