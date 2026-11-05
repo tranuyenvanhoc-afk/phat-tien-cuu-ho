@@ -47,6 +47,15 @@
       if (ch.nodeType === 3) { out.appendChild(document.createTextNode(holes(ch.textContent, scope))); continue; }
       if (ch.nodeType !== 1) continue;
       const t = ch.localName;
+      if (t === 'option' && ch.hasAttribute('data-for-list')) {
+        const one = ch.cloneNode(true), holder = document.createElement('div');
+        one.removeAttribute('data-for-list');
+        one.removeAttribute('data-for-as');
+        holder.appendChild(one);
+        const as = ch.getAttribute('data-for-as');
+        (whole(ch.getAttribute('data-for-list'), scope) || []).forEach((it, i) => render(holder, Object.assign({}, scope, { [as]: it, $index: i }), out, ctx));
+        continue;
+      }
       if (t === 'sc-for') {
         const list = whole(ch.getAttribute('list'), scope) || [];
         const as = ch.getAttribute('as');
@@ -126,12 +135,21 @@
     while (oldP.childNodes.length > kids.length) oldP.removeChild(oldP.lastChild);
   }
 
+  // Safari, Firefox và Chrome cũ bỏ thẻ lạ nằm trong <select>, làm mất vòng lặp <sc-for> của danh sách <option>.
+  // Chuyển vòng lặp thành thuộc tính trên chính <option> để mọi trình duyệt đều giữ được.
+  function selectLoops(html) {
+    return html.replace(/<sc-for\b([^>]*)>\s*<option\b([\s\S]*?<\/option>)\s*<\/sc-for>/g, (m, attrs, rest) => {
+      const list = (attrs.match(/\blist="([^"]*)"/) || [])[1], as = (attrs.match(/\bas="([^"]*)"/) || [])[1];
+      return '<option data-for-list="' + list + '" data-for-as="' + as + '"' + rest;
+    });
+  }
+
   function mount(name, container) {
     const def = window.DEFS[name];
     const C = new Function('DCLogic', def.script + '\n;return Component;')(DCLogic);
     const inst = new C(Object.assign({}, def.props));
     const tpl = document.createElement('template');
-    tpl.innerHTML = def.tpl;
+    tpl.innerHTML = selectLoops(def.tpl);
     const ctx = { name, children: {} };
     inst.__draw = () => {
       const next = document.createElement('div');
